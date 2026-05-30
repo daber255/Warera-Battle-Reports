@@ -1,0 +1,2643 @@
+{
+  "countries": {
+    "6813b6d546e731854c7ac85c": {
+      "name": "Bolivia",
+      "specializedItem": "limestone",
+      "incomeTax": 1,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7099403bc4170a5d99f",
+        "6813b7099403bc4170a5d999",
+        "6813b7099403bc4170a5d9a2",
+        "6813b7099403bc4170a5d99c"
+      ]
+    },
+    "6813b6d546e731854c7ac871": {
+      "name": "Singapore",
+      "specializedItem": null,
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70a9403bc4170a5da3e"
+      ]
+    },
+    "6813b6d446e731854c7ac7a6": {
+      "name": "Switzerland",
+      "specializedItem": null,
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7039403bc4170a5d68d",
+        "6813b7039403bc4170a5d686"
+      ]
+    },
+    "6813b6d546e731854c7ac826": {
+      "name": "Taiwan",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8a3": {
+      "name": "Trinidad and Tobago",
+      "specializedItem": "bread",
+      "incomeTax": 6,
+      "productionPct": 10,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 10,
+      "regionIds": [
+        "6813b70b9403bc4170a5dab6",
+        "6813b7099403bc4170a5d9cc"
+      ]
+    },
+    "6813b6d546e731854c7ac8ac": {
+      "name": "Panama",
+      "specializedItem": "cookedFish",
+      "incomeTax": 45,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70c9403bc4170a5dadd",
+        "6813b70b9403bc4170a5dada"
+      ]
+    },
+    "6813b6d546e731854c7ac8bb": {
+      "name": "Belize",
+      "specializedItem": "concrete",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac896": {
+      "name": "Haiti",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15b9": {
+      "name": "Bangladesh",
+      "specializedItem": "steak",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15c7": {
+      "name": "Jordan",
+      "specializedItem": "concrete",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15c5": {
+      "name": "Iceland",
+      "specializedItem": null,
+      "incomeTax": 10,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "683ddd3f36dbc90b780475c5",
+        "683ddd3f36dbc90b780475bc",
+        "683ddd3f36dbc90b780475c2",
+        "683ddd3f36dbc90b780475bf"
+      ]
+    },
+    "683ddd2c24b5a2e114af15d3": {
+      "name": "Madagascar",
+      "specializedItem": "livestock",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3f36dbc90b780475ce"
+      ]
+    },
+    "683ddd2c24b5a2e114af15f7": {
+      "name": "Namibia",
+      "specializedItem": "lead",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3f36dbc90b780475e3",
+        "683ddd3f36dbc90b780475e9",
+        "683ddd3f36dbc90b780475e6"
+      ]
+    },
+    "6813b6d446e731854c7ac7b0": {
+      "name": "Czechia",
+      "specializedItem": null,
+      "incomeTax": 3,
+      "productionPct": 0,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7059403bc4170a5d741"
+      ]
+    },
+    "6813b6d446e731854c7ac7b4": {
+      "name": "Slovenia",
+      "specializedItem": "petroleum",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7049403bc4170a5d732"
+      ]
+    },
+    "6813b6d446e731854c7ac7be": {
+      "name": "Bulgaria",
+      "specializedItem": "bread",
+      "incomeTax": 6.5,
+      "productionPct": 15,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 15,
+      "regionIds": [
+        "6813b7059403bc4170a5d786",
+        "6813b7059403bc4170a5d77d",
+        "6813b7059403bc4170a5d780",
+        "6813b7059403bc4170a5d7bc",
+        "6813b7059403bc4170a5d74d",
+        "6813b7059403bc4170a5d783",
+        "6813b70a9403bc4170a5da2c",
+        "6813b70a9403bc4170a5da02"
+      ]
+    },
+    "6813b6d446e731854c7ac80e": {
+      "name": "Bosnia",
+      "specializedItem": "limestone",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac858": {
+      "name": "Venezuela",
+      "specializedItem": "iron",
+      "incomeTax": 6,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac890": {
+      "name": "Greenland",
+      "specializedItem": null,
+      "incomeTax": 10,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70b9403bc4170a5da98",
+        "6813b70b9403bc4170a5da95",
+        "6813b70b9403bc4170a5da9b"
+      ]
+    },
+    "6813b6d546e731854c7ac8c1": {
+      "name": "Uzbekistan",
+      "specializedItem": "limestone",
+      "incomeTax": 9,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70c9403bc4170a5db13",
+        "6813b70c9403bc4170a5db10",
+        "6813b70c9403bc4170a5db19",
+        "6813b70c9403bc4170a5db0d",
+        "6813b70c9403bc4170a5db16"
+      ]
+    },
+    "6813b6d546e731854c7ac8dd": {
+      "name": "Qatar",
+      "specializedItem": "petroleum",
+      "incomeTax": 7.5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac829": {
+      "name": "Indonesia",
+      "specializedItem": "bread",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac84b": {
+      "name": "Algeria",
+      "specializedItem": "lead",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 1,
+      "ethicsBonus": 15,
+      "totalBonus": 15,
+      "regionIds": [
+        "6813b7099403bc4170a5d981",
+        "6813b7099403bc4170a5d98a",
+        "696a81f5882256e1db118214",
+        "696a81f5882256e1db118216"
+      ]
+    },
+    "6813b6d546e731854c7ac838": {
+      "name": "Paraguay",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 8,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 35,
+      "regionIds": [
+        "6813b7089403bc4170a5d92d",
+        "6813b7089403bc4170a5d930",
+        "6813b7089403bc4170a5d92a"
+      ]
+    },
+    "683ddd2c24b5a2e114af15b7": {
+      "name": "Angola",
+      "specializedItem": "iron",
+      "incomeTax": 7.5,
+      "productionPct": 0,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 30,
+      "regionIds": [
+        "683ddd3d36dbc90b7804745d"
+      ]
+    },
+    "683ddd2c24b5a2e114af15cf": {
+      "name": "Lebanon",
+      "specializedItem": "petroleum",
+      "incomeTax": 9,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3e36dbc90b780474dc",
+        "683ddd3e36dbc90b780474df"
+      ]
+    },
+    "683ddd2c24b5a2e114af15d1": {
+      "name": "Sri Lanka",
+      "specializedItem": "steel",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15d5": {
+      "name": "Myanmar",
+      "specializedItem": null,
+      "incomeTax": 4,
+      "productionPct": 0,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3e36dbc90b780474e9"
+      ]
+    },
+    "683ddd2c24b5a2e114af15cb": {
+      "name": "United Korea",
+      "specializedItem": "cocain",
+      "incomeTax": 13,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "683ddd3e36dbc90b780474ca",
+        "683ddd3e36dbc90b780474d0",
+        "683ddd3e36dbc90b780474c7",
+        "683ddd3e36dbc90b780474cd"
+      ]
+    },
+    "6873d0ea1758b40e712b5ee7": {
+      "name": "Gambia",
+      "specializedItem": "livestock",
+      "incomeTax": 1,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11694e6b3b7989a4cad"
+      ]
+    },
+    "6873d0ea1758b40e712b5f31": {
+      "name": "Equatorial Guinea",
+      "specializedItem": "petroleum",
+      "incomeTax": 10,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11794e6b3b7989a4cc5",
+        "6873d11794e6b3b7989a4cc2"
+      ]
+    },
+    "6873d0ea1758b40e712b5f49": {
+      "name": "Cape Verde",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 40,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f4f": {
+      "name": "Brunei",
+      "specializedItem": "oil",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f56": {
+      "name": "East Timor",
+      "specializedItem": "bread",
+      "incomeTax": 10,
+      "productionPct": 5.5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5.5,
+      "regionIds": [
+        "6813b7089403bc4170a5d8e2",
+        "6813b7089403bc4170a5d8dc",
+        "6873d11594e6b3b7989a4c50"
+      ]
+    },
+    "6813b6d546e731854c7ac85f": {
+      "name": "Colombia",
+      "specializedItem": "oil",
+      "incomeTax": 7,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7099403bc4170a5d9a5",
+        "6813b7099403bc4170a5d9a8",
+        "6813b7099403bc4170a5d9c6",
+        "6813b7099403bc4170a5d9ab",
+        "6813b7099403bc4170a5d9b1",
+        "6813b7099403bc4170a5d9c3",
+        "6813b7099403bc4170a5d9ae"
+      ]
+    },
+    "6813b6d446e731854c7ac7e5": {
+      "name": "United States",
+      "specializedItem": "iron",
+      "incomeTax": 10,
+      "productionPct": 26,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 26,
+      "regionIds": [
+        "6813b7069403bc4170a5d7f5",
+        "6813b70b9403bc4170a5daa7",
+        "6813b7069403bc4170a5d801",
+        "6813b7069403bc4170a5d7ec",
+        "6813b7069403bc4170a5d7fe",
+        "6813b70b9403bc4170a5da8f",
+        "6813b70b9403bc4170a5da83",
+        "6813b7069403bc4170a5d7f8",
+        "6813b7069403bc4170a5d7f2",
+        "6813b70b9403bc4170a5da89",
+        "6813b70b9403bc4170a5daaa",
+        "6813b7069403bc4170a5d804",
+        "6813b70b9403bc4170a5da86",
+        "6813b70b9403bc4170a5daad",
+        "6813b70b9403bc4170a5da92",
+        "6813b7069403bc4170a5d7ef",
+        "6813b7069403bc4170a5d7fb"
+      ]
+    },
+    "6813b6d546e731854c7ac83c": {
+      "name": "Chile",
+      "specializedItem": "lead",
+      "incomeTax": 12,
+      "productionPct": 5.5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5.5,
+      "regionIds": [
+        "6813b7069403bc4170a5d7e9",
+        "6813b7089403bc4170a5d939",
+        "6813b70b9403bc4170a5da8c",
+        "6813b7089403bc4170a5d936",
+        "6813b7099403bc4170a5d9bd",
+        "6813b7089403bc4170a5d93c",
+        "6813b7089403bc4170a5d933",
+        "6813b7089403bc4170a5d93f"
+      ]
+    },
+    "6813b6d546e731854c7ac852": {
+      "name": "Libya",
+      "specializedItem": "ammo",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7099403bc4170a5d97e",
+        "6813b7099403bc4170a5d978",
+        "6813b7099403bc4170a5d97b",
+        "6813b7099403bc4170a5d975"
+      ]
+    },
+    "6813b6d546e731854c7ac8b5": {
+      "name": "Honduras",
+      "specializedItem": "livestock",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8b8": {
+      "name": "Guatemala",
+      "specializedItem": null,
+      "incomeTax": 3.5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70c9403bc4170a5daf8",
+        "6813b70c9403bc4170a5daf2",
+        "6813b70c9403bc4170a5daf5"
+      ]
+    },
+    "6873d0ea1758b40e712b5f3d": {
+      "name": "Malta",
+      "specializedItem": "cocain",
+      "incomeTax": 7,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f40": {
+      "name": "Rwanda",
+      "specializedItem": "steak",
+      "incomeTax": 45,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7fb": {
+      "name": "Luxembourg",
+      "specializedItem": "petroleum",
+      "incomeTax": 8,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7069403bc4170a5d822"
+      ]
+    },
+    "6813b6d446e731854c7ac7f8": {
+      "name": "Mexico",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 6,
+      "productionPct": 10,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 40,
+      "regionIds": [
+        "6813b70c9403bc4170a5dafb",
+        "6813b7069403bc4170a5d813",
+        "6813b7069403bc4170a5d819",
+        "6813b7069403bc4170a5d807",
+        "6813b7069403bc4170a5d816",
+        "6813b7069403bc4170a5d81c",
+        "6813b7069403bc4170a5d810",
+        "6813b7069403bc4170a5d80a",
+        "6813b7069403bc4170a5d80d",
+        "6813b7069403bc4170a5d81f"
+      ]
+    },
+    "6813b6d546e731854c7ac835": {
+      "name": "Uruguay",
+      "specializedItem": "coca",
+      "incomeTax": 8,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7089403bc4170a5d924",
+        "6813b7089403bc4170a5d927"
+      ]
+    },
+    "6813b6d546e731854c7ac86b": {
+      "name": "Moldova",
+      "specializedItem": "coca",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac877": {
+      "name": "South Sudan",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70a9403bc4170a5da4a"
+      ]
+    },
+    "6813b6d546e731854c7ac883": {
+      "name": "Fiji",
+      "specializedItem": "livestock",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af160c": {
+      "name": "Vietnam",
+      "specializedItem": "grain",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "683ddd3f36dbc90b7804758f",
+        "683ddd3f36dbc90b78047586",
+        "683ddd3f36dbc90b7804758c",
+        "683ddd3f36dbc90b78047583",
+        "683ddd3f36dbc90b78047589"
+      ]
+    },
+    "6873d0ea1758b40e712b5ef3": {
+      "name": "Uganda",
+      "specializedItem": "steel",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 30,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f37": {
+      "name": "Burkina Faso",
+      "specializedItem": "steak",
+      "incomeTax": 45,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f3a": {
+      "name": "Tanzania",
+      "specializedItem": "oil",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11894e6b3b7989a4d11",
+        "6873d11894e6b3b7989a4d20"
+      ]
+    },
+    "6873d0ea1758b40e712b5f43": {
+      "name": "Burundi",
+      "specializedItem": null,
+      "incomeTax": 3.5,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11494e6b3b7989a4c1a",
+        "6873d11894e6b3b7989a4d17",
+        "6873d11494e6b3b7989a4c17",
+        "6873d11594e6b3b7989a4c47",
+        "6873d11494e6b3b7989a4c11",
+        "6873d11494e6b3b7989a4c14"
+      ]
+    },
+    "6873d0ea1758b40e712b5f67": {
+      "name": "Papua New Guinea",
+      "specializedItem": "ammo",
+      "incomeTax": 10,
+      "productionPct": 10,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 10,
+      "regionIds": [
+        "6813b70b9403bc4170a5da68",
+        "6813b7089403bc4170a5d8df",
+        "6813b70b9403bc4170a5da6b",
+        "6813b70b9403bc4170a5da77",
+        "6873d11794e6b3b7989a4ce9",
+        "6813b70b9403bc4170a5da6e",
+        "6873d11794e6b3b7989a4cec",
+        "6813b70b9403bc4170a5da71",
+        "6873d11794e6b3b7989a4cef",
+        "6813b70b9403bc4170a5da65",
+        "6813b70b9403bc4170a5da74"
+      ]
+    },
+    "6813b6d446e731854c7ac808": {
+      "name": "Canada",
+      "specializedItem": "fish",
+      "incomeTax": 6,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7079403bc4170a5d852",
+        "6813b7079403bc4170a5d858",
+        "6813b7079403bc4170a5d84f",
+        "6813b7079403bc4170a5d855",
+        "6813b7079403bc4170a5d84c",
+        "6813b7069403bc4170a5d849"
+      ]
+    },
+    "6813b6d546e731854c7ac83f": {
+      "name": "Peru",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 10,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 35,
+      "regionIds": [
+        "6813b7089403bc4170a5d942",
+        "6813b7089403bc4170a5d948",
+        "6813b7089403bc4170a5d945",
+        "6813b7089403bc4170a5d94b"
+      ]
+    },
+    "6813b6d546e731854c7ac886": {
+      "name": "Cuba",
+      "specializedItem": "iron",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8a9": {
+      "name": "Costa Rica",
+      "specializedItem": "steel",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70b9403bc4170a5dad7"
+      ]
+    },
+    "6813b6d546e731854c7ac845": {
+      "name": "Egypt",
+      "specializedItem": "iron",
+      "incomeTax": 11,
+      "productionPct": 32,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 62,
+      "regionIds": [
+        "6813b7099403bc4170a5d969",
+        "6813b7099403bc4170a5d972",
+        "6813b70a9403bc4170a5da50",
+        "6813b7099403bc4170a5d966",
+        "6813b7099403bc4170a5d963",
+        "6873d11494e6b3b7989a4bea",
+        "6873d11494e6b3b7989a4c05",
+        "6873d11494e6b3b7989a4c08",
+        "6873d11594e6b3b7989a4c32",
+        "6873d11594e6b3b7989a4c65",
+        "6873d11694e6b3b7989a4c8c",
+        "683ddd3d36dbc90b78047497",
+        "6873d11694e6b3b7989a4c98",
+        "6813b70a9403bc4170a5da4d",
+        "6873d11694e6b3b7989a4c9e",
+        "683ddd3e36dbc90b7804752e",
+        "6873d11494e6b3b7989a4c0b",
+        "6873d11594e6b3b7989a4c68",
+        "6873d11694e6b3b7989a4c89",
+        "6873d11794e6b3b7989a4cd2",
+        "6813b7099403bc4170a5d96f",
+        "6813b7099403bc4170a5d960",
+        "6813b7099403bc4170a5d96c",
+        "6813b70a9403bc4170a5da44",
+        "6873d11494e6b3b7989a4be7",
+        "6873d11694e6b3b7989a4ca4",
+        "6873d11794e6b3b7989a4ccc",
+        "6873d11594e6b3b7989a4c2c",
+        "6873d11694e6b3b7989a4ca7",
+        "6813b70a9403bc4170a5da41",
+        "6873d11694e6b3b7989a4c92"
+      ]
+    },
+    "6813b6d546e731854c7ac8c4": {
+      "name": "Kyrgyzstan",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15cd": {
+      "name": "Laos",
+      "specializedItem": "iron",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f25": {
+      "name": "Benin",
+      "specializedItem": "limestone",
+      "incomeTax": 19,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11594e6b3b7989a4c71",
+        "6873d11594e6b3b7989a4c6e"
+      ]
+    },
+    "6873d0ea1758b40e712b5f34": {
+      "name": "Ivory Coast",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11694e6b3b7989a4c83",
+        "6873d11694e6b3b7989a4c86"
+      ]
+    },
+    "6873d0ea1758b40e712b5f73": {
+      "name": "Zambia",
+      "specializedItem": null,
+      "incomeTax": 3,
+      "productionPct": 0,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11894e6b3b7989a4d2c",
+        "6873d11894e6b3b7989a4d2f",
+        "6873d11894e6b3b7989a4d26",
+        "6873d11894e6b3b7989a4d29"
+      ]
+    },
+    "6813b6d446e731854c7ac7a2": {
+      "name": "Italy",
+      "specializedItem": "lead",
+      "incomeTax": 7.9,
+      "productionPct": 31,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 61,
+      "regionIds": [
+        "6813b7039403bc4170a5d6b7",
+        "6813b7039403bc4170a5d69f",
+        "6813b7069403bc4170a5d7e6",
+        "6813b7049403bc4170a5d6cc",
+        "6813b7039403bc4170a5d690",
+        "6813b7049403bc4170a5d6db",
+        "6813b7079403bc4170a5d87c",
+        "681a1795a55a0e2b88d5ae39",
+        "6813b7049403bc4170a5d6ba",
+        "6813b7069403bc4170a5d7e3",
+        "6813b7039403bc4170a5d696",
+        "6813b7049403bc4170a5d6d5",
+        "6813b7039403bc4170a5d693",
+        "6813b7039403bc4170a5d69c",
+        "6813b7049403bc4170a5d6d2",
+        "6813b7039403bc4170a5d699",
+        "6813b7099403bc4170a5d98d",
+        "69614d2720e5425d54d00c56",
+        "696a81f5882256e1db118204"
+      ]
+    },
+    "6813b6d446e731854c7ac7ae": {
+      "name": "Poland",
+      "specializedItem": "concrete",
+      "incomeTax": 12,
+      "productionPct": 21,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 51,
+      "regionIds": [
+        "6813b7049403bc4170a5d71a",
+        "6813b7049403bc4170a5d720",
+        "6813b7049403bc4170a5d714",
+        "6813b70d9403bc4170a5db5b",
+        "6813b7049403bc4170a5d717",
+        "6813b7049403bc4170a5d723",
+        "6813b70c9403bc4170a5db2e",
+        "6813b70d9403bc4170a5db5e",
+        "6813b70d9403bc4170a5db6a",
+        "6813b7049403bc4170a5d71d",
+        "683ddd3f36dbc90b7804757d",
+        "6813b70d9403bc4170a5db58",
+        "6813b70a9403bc4170a5da14",
+        "6813b70c9403bc4170a5db1f",
+        "683ddd3e36dbc90b780474bb",
+        "683ddd3f36dbc90b78047574",
+        "6813b70d9403bc4170a5db67",
+        "683ddd3e36dbc90b780474ef",
+        "6813b70b9403bc4170a5da5c",
+        "683ddd3e36dbc90b780474ec",
+        "6813b70b9403bc4170a5da5f",
+        "6813b70c9403bc4170a5db22",
+        "683ddd3f36dbc90b78047577",
+        "6813b70a9403bc4170a5da1d",
+        "6813b7079403bc4170a5d89d",
+        "6813b7079403bc4170a5d8a0",
+        "6813b70d9403bc4170a5db6d",
+        "683ddd3e36dbc90b780474c1",
+        "683ddd3e36dbc90b780474f2",
+        "683ddd3f36dbc90b7804757a",
+        "683ddd3f36dbc90b78047580",
+        "683ddd3d36dbc90b7804746a",
+        "6813b70c9403bc4170a5db1c",
+        "683ddd3e36dbc90b780474e6"
+      ]
+    },
+    "6813b6d446e731854c7ac7b8": {
+      "name": "Lithuania",
+      "specializedItem": "cookedFish",
+      "incomeTax": 8,
+      "productionPct": 26,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 26,
+      "regionIds": [
+        "6813b70a9403bc4170a5da0b",
+        "6813b70a9403bc4170a5da23",
+        "6813b7059403bc4170a5d75c",
+        "6813b7059403bc4170a5d759",
+        "6813b7059403bc4170a5d75f",
+        "6813b7079403bc4170a5d89a",
+        "6813b70a9403bc4170a5da0e",
+        "6813b7059403bc4170a5d762",
+        "6813b7069403bc4170a5d83d",
+        "6813b70a9403bc4170a5da56",
+        "6813b70a9403bc4170a5da29",
+        "6813b70d9403bc4170a5db61",
+        "6813b70a9403bc4170a5da20",
+        "6813b70a9403bc4170a5da26",
+        "6813b70a9403bc4170a5da53",
+        "6813b70a9403bc4170a5da17",
+        "6813b7079403bc4170a5d897",
+        "683ddd3e36dbc90b780474fb",
+        "6813b70d9403bc4170a5db64",
+        "6813b70b9403bc4170a5da59",
+        "6813b70d9403bc4170a5db55",
+        "696a81f5882256e1db11820e",
+        "696a81f5882256e1db11821e",
+        "696a81f5882256e1db118220",
+        "696a81f5882256e1db118222",
+        "696a81f5882256e1db118224",
+        "696a81f5882256e1db118226",
+        "696a81f5882256e1db11821a"
+      ]
+    },
+    "6813b6d446e731854c7ac7fe": {
+      "name": "Ireland",
+      "specializedItem": null,
+      "incomeTax": 4,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac80b": {
+      "name": "Finland",
+      "specializedItem": "fish",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7079403bc4170a5d85b",
+        "6813b7079403bc4170a5d867",
+        "6813b7079403bc4170a5d85e",
+        "6813b7079403bc4170a5d861"
+      ]
+    },
+    "6813b6d546e731854c7ac823": {
+      "name": "South Korea",
+      "specializedItem": "limestone",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7079403bc4170a5d8c1",
+        "6813b7079403bc4170a5d8c4",
+        "6813b7079403bc4170a5d8bb"
+      ]
+    },
+    "6813b6d446e731854c7ac7e8": {
+      "name": "Greece",
+      "specializedItem": "cookedFish",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7059403bc4170a5d7c2",
+        "6813b7059403bc4170a5d7bf",
+        "6813b7059403bc4170a5d7b6",
+        "6813b7059403bc4170a5d7b9",
+        "696a81f5882256e1db11820a"
+      ]
+    },
+    "6813b6d546e731854c7ac874": {
+      "name": "Sudan",
+      "specializedItem": "bread",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70a9403bc4170a5da47"
+      ]
+    },
+    "6813b6d546e731854c7ac893": {
+      "name": "Guyana",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 12,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70b9403bc4170a5daa1",
+        "6813b70b9403bc4170a5daa4"
+      ]
+    },
+    "6813b6d546e731854c7ac8a6": {
+      "name": "Iran",
+      "specializedItem": "petroleum",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac805": {
+      "name": "Slovakia",
+      "specializedItem": "petroleum",
+      "incomeTax": 6,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7069403bc4170a5d840",
+        "6813b7069403bc4170a5d843",
+        "6813b7069403bc4170a5d846"
+      ]
+    },
+    "683ddd2c24b5a2e114af15c3": {
+      "name": "Iraq",
+      "specializedItem": "limestone",
+      "incomeTax": 11,
+      "productionPct": 26.25,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 56.25,
+      "regionIds": [
+        "6813b70b9403bc4170a5dacb",
+        "6813b70d9403bc4170a5dbaf",
+        "6813b70b9403bc4170a5dac5",
+        "6813b70b9403bc4170a5dace",
+        "683ddd3e36dbc90b780474b2",
+        "683ddd3e36dbc90b780474ac",
+        "683ddd3e36dbc90b780474af",
+        "683ddd3e36dbc90b780474b5",
+        "683ddd3e36dbc90b7804753d",
+        "683ddd3e36dbc90b780474b8",
+        "683ddd3d36dbc90b780474a0",
+        "683ddd3e36dbc90b78047543",
+        "683ddd3f36dbc90b78047549",
+        "6813b70b9403bc4170a5dac8",
+        "683ddd3d36dbc90b78047451",
+        "687eab418fc7f0dfa1d2b988",
+        "6813b70d9403bc4170a5db9d",
+        "6813b70d9403bc4170a5dbb2",
+        "683ddd3e36dbc90b780474a9",
+        "6813b70b9403bc4170a5dab9",
+        "6813b70b9403bc4170a5dabf",
+        "683ddd3e36dbc90b780474a6",
+        "683ddd3d36dbc90b78047454",
+        "683ddd3e36dbc90b780474a3"
+      ]
+    },
+    "683ddd2c24b5a2e114af15d7": {
+      "name": "Mongolia",
+      "specializedItem": "cookedFish",
+      "incomeTax": 3,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3e36dbc90b780474f8",
+        "683ddd3e36dbc90b780474fe",
+        "683ddd3e36dbc90b780474f5",
+        "683ddd3e36dbc90b78047501"
+      ]
+    },
+    "683ddd2c24b5a2e114af1612": {
+      "name": "South Africa",
+      "specializedItem": "steel",
+      "incomeTax": 12,
+      "productionPct": 35,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 65,
+      "regionIds": [
+        "683ddd3f36dbc90b780475aa",
+        "6873d11894e6b3b7989a4d1d",
+        "6813b70a9403bc4170a5da35",
+        "6813b70a9403bc4170a5da32",
+        "683ddd3d36dbc90b7804745a",
+        "683ddd3e36dbc90b78047513",
+        "683ddd3f36dbc90b780475b0",
+        "683ddd3f36dbc90b780475e0",
+        "6873d11594e6b3b7989a4c44",
+        "6813b70a9403bc4170a5da3b",
+        "683ddd3d36dbc90b78047463",
+        "683ddd3e36dbc90b78047516",
+        "683ddd3f36dbc90b780475da",
+        "6873d11494e6b3b7989a4c1d",
+        "6873d11494e6b3b7989a4c23",
+        "6873d11694e6b3b7989a4c77",
+        "683ddd3f36dbc90b780475b6",
+        "6873d11894e6b3b7989a4d14",
+        "6873d11894e6b3b7989a4d32",
+        "683ddd3f36dbc90b780475b3",
+        "683ddd4036dbc90b780475ec",
+        "6873d11494e6b3b7989a4c29",
+        "6873d11894e6b3b7989a4d1a",
+        "683ddd3e36dbc90b7804751c",
+        "683ddd3f36dbc90b780475ad",
+        "6873d11694e6b3b7989a4c74",
+        "6873d11794e6b3b7989a4cd7",
+        "6873d11894e6b3b7989a4d35",
+        "683ddd3d36dbc90b78047457",
+        "683ddd3f36dbc90b780475a7",
+        "683ddd3d36dbc90b78047460",
+        "683ddd3e36dbc90b7804751f",
+        "6873d11494e6b3b7989a4c0e",
+        "6873d11594e6b3b7989a4c53",
+        "6813b70a9403bc4170a5da38",
+        "6813b70a9403bc4170a5da2f",
+        "683ddd3e36dbc90b78047522",
+        "683ddd3f36dbc90b780475d4",
+        "6873d11594e6b3b7989a4c35",
+        "6873d11594e6b3b7989a4c3b",
+        "6873d11694e6b3b7989a4caa",
+        "6873d11894e6b3b7989a4d23",
+        "683ddd3d36dbc90b78047466",
+        "683ddd3f36dbc90b780475a4",
+        "683ddd3f36dbc90b780475d1",
+        "683ddd3f36dbc90b780475d7",
+        "6873d11494e6b3b7989a4c20",
+        "6873d11494e6b3b7989a4c26",
+        "6873d11594e6b3b7989a4c38",
+        "6873d11594e6b3b7989a4c59",
+        "6873d11794e6b3b7989a4cf5",
+        "696a81f5882256e1db11822a",
+        "696a81f5882256e1db11822c"
+      ]
+    },
+    "6873d0ea1758b40e712b5eef": {
+      "name": "Senegal",
+      "specializedItem": "ammo",
+      "incomeTax": 7,
+      "productionPct": 0,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 30,
+      "regionIds": [
+        "6873d11494e6b3b7989a4c02",
+        "6873d11494e6b3b7989a4bfc"
+      ]
+    },
+    "6873d0ea1758b40e712b5eeb": {
+      "name": "Ghana",
+      "specializedItem": "oil",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5ef1": {
+      "name": "Niger",
+      "specializedItem": "concrete",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f70": {
+      "name": "Botswana",
+      "specializedItem": "iron",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 1,
+      "ethicsBonus": 15,
+      "totalBonus": 15,
+      "regionIds": [
+        "6873d11694e6b3b7989a4c80",
+        "6873d11694e6b3b7989a4c7a",
+        "6873d11694e6b3b7989a4c7d"
+      ]
+    },
+    "6813b6d546e731854c7ac848": {
+      "name": "Morocco",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 7,
+      "productionPct": 15.5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 45.5,
+      "regionIds": [
+        "6813b7049403bc4170a5d6ea",
+        "6813b7099403bc4170a5d957",
+        "6813b7049403bc4170a5d6f9",
+        "6813b7049403bc4170a5d6ff",
+        "6813b7099403bc4170a5d95a",
+        "6813b7049403bc4170a5d6fc",
+        "6813b7099403bc4170a5d954",
+        "6873d11594e6b3b7989a4c4a",
+        "687eab418fc7f0dfa1d2b98b",
+        "687eab418fc7f0dfa1d2b98e",
+        "6813b7049403bc4170a5d6f0",
+        "6813b7099403bc4170a5d95d",
+        "6813b7049403bc4170a5d6e7",
+        "6813b7049403bc4170a5d702",
+        "6813b7089403bc4170a5d951",
+        "696a81f5882256e1db118212"
+      ]
+    },
+    "6813b6d446e731854c7ac7c0": {
+      "name": "Latvia",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 8,
+      "productionPct": 15,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 45,
+      "regionIds": [
+        "6813b7059403bc4170a5d771",
+        "6813b7059403bc4170a5d768",
+        "6813b7059403bc4170a5d76e",
+        "6813b70a9403bc4170a5da1a",
+        "6813b7059403bc4170a5d76b",
+        "6813b7079403bc4170a5d864",
+        "6813b7059403bc4170a5d765",
+        "696a81f5882256e1db11821c"
+      ]
+    },
+    "6813b6d446e731854c7ac7aa": {
+      "name": "Portugal",
+      "specializedItem": "iron",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7ef": {
+      "name": "Denmark",
+      "specializedItem": "grain",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7049403bc4170a5d6cf",
+        "6813b7069403bc4170a5d7c5",
+        "6813b7069403bc4170a5d7c8",
+        "6813b7049403bc4170a5d6d8",
+        "6813b7069403bc4170a5d7cb",
+        "696a81f5882256e1db11820c"
+      ]
+    },
+    "6813b6d446e731854c7ac802": {
+      "name": "Norway",
+      "specializedItem": null,
+      "incomeTax": 9,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac811": {
+      "name": "North Macedonia",
+      "specializedItem": "concrete",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac817": {
+      "name": "Kosovo",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac87a": {
+      "name": "Belarus",
+      "specializedItem": "lead",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70b9403bc4170a5da62"
+      ]
+    },
+    "6813b6d546e731854c7ac880": {
+      "name": "New Zealand",
+      "specializedItem": null,
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70b9403bc4170a5da7d"
+      ]
+    },
+    "6813b6d546e731854c7ac8d4": {
+      "name": "Armenia",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8cb": {
+      "name": "Saudi Arabia",
+      "specializedItem": "petroleum",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70c9403bc4170a5db31",
+        "6813b70c9403bc4170a5db37",
+        "6813b70c9403bc4170a5db3d",
+        "6813b70c9403bc4170a5db4f",
+        "6813b70c9403bc4170a5db52",
+        "6813b70c9403bc4170a5db3a",
+        "6813b70c9403bc4170a5db4c",
+        "6813b70c9403bc4170a5db34",
+        "6813b70c9403bc4170a5db40",
+        "6813b70c9403bc4170a5db46",
+        "6813b70c9403bc4170a5db49",
+        "6813b70c9403bc4170a5db43"
+      ]
+    },
+    "6813b6d546e731854c7ac8c8": {
+      "name": "Tajikistan",
+      "specializedItem": "petroleum",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70c9403bc4170a5db25",
+        "6813b70c9403bc4170a5db28",
+        "6813b70c9403bc4170a5db2b"
+      ]
+    },
+    "6813b6d546e731854c7ac8e0": {
+      "name": "Kuwait",
+      "specializedItem": "iron",
+      "incomeTax": 45,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8af": {
+      "name": "Nicaragua",
+      "specializedItem": "petroleum",
+      "incomeTax": 5,
+      "productionPct": 20,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 20,
+      "regionIds": [
+        "6813b70b9403bc4170a5dad4",
+        "6813b70c9403bc4170a5daec",
+        "6813b70c9403bc4170a5dae0",
+        "6813b70c9403bc4170a5dae6",
+        "6813b70c9403bc4170a5daef",
+        "6813b70c9403bc4170a5dae3"
+      ]
+    },
+    "683ddd2c24b5a2e114af15bf": {
+      "name": "Georgia",
+      "specializedItem": "cookedFish",
+      "incomeTax": 15,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15c9": {
+      "name": "Cambodia",
+      "specializedItem": "limestone",
+      "incomeTax": 45,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15d9": {
+      "name": "Malaysia",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 1,
+      "productionPct": 5.5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 35.5,
+      "regionIds": [
+        "683ddd3e36dbc90b78047504",
+        "683ddd3e36dbc90b7804750a",
+        "683ddd3e36dbc90b7804750d",
+        "683ddd3e36dbc90b78047507",
+        "683ddd3e36dbc90b78047510",
+        "6873d11594e6b3b7989a4c4d"
+      ]
+    },
+    "683ddd2c24b5a2e114af15fd": {
+      "name": "Oman",
+      "specializedItem": "ammo",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3e36dbc90b78047546",
+        "683ddd3e36dbc90b78047540"
+      ]
+    },
+    "6873d0ea1758b40e712b5ee9": {
+      "name": "Mali",
+      "specializedItem": "cookedFish",
+      "incomeTax": 2.5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11394e6b3b7989a4bcf",
+        "6873d11394e6b3b7989a4bd8",
+        "6873d11394e6b3b7989a4bde"
+      ]
+    },
+    "6873d0ea1758b40e712b5ef7": {
+      "name": "Gabon",
+      "specializedItem": "steak",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11694e6b3b7989a4cb0"
+      ]
+    },
+    "6873d0ea1758b40e712b5f2e": {
+      "name": "Central Africa",
+      "specializedItem": null,
+      "incomeTax": 4,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11594e6b3b7989a4c2f"
+      ]
+    },
+    "6873d0ea1758b40e712b5f6d": {
+      "name": "Zimbabwe",
+      "specializedItem": "steel",
+      "incomeTax": 7,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11894e6b3b7989a4d38"
+      ]
+    },
+    "6873d0ea1758b40e712b5f28": {
+      "name": "DR Congo",
+      "specializedItem": "coca",
+      "incomeTax": 11,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac79a": {
+      "name": "France",
+      "specializedItem": "steak",
+      "incomeTax": 7,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7049403bc4170a5d6c9",
+        "6813b7049403bc4170a5d6c0",
+        "6813b7049403bc4170a5d6c6",
+        "6813b7039403bc4170a5d6b4",
+        "6873d11594e6b3b7989a4c62",
+        "6813b7049403bc4170a5d6c3",
+        "6813b7049403bc4170a5d6bd",
+        "696a81f5882256e1db118206"
+      ]
+    },
+    "6813b6d546e731854c7ac81d": {
+      "name": "Japan",
+      "specializedItem": "livestock",
+      "incomeTax": 1,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7079403bc4170a5d894",
+        "6813b7079403bc4170a5d885",
+        "6813b7079403bc4170a5d891",
+        "6813b7079403bc4170a5d888",
+        "6813b7079403bc4170a5d88b",
+        "6813b7079403bc4170a5d882",
+        "6813b7079403bc4170a5d88e",
+        "6813b7079403bc4170a5d87f",
+        "696a81f5882256e1db118210"
+      ]
+    },
+    "6813b6d546e731854c7ac8ce": {
+      "name": "Kazakhstan",
+      "specializedItem": "lead",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7f5": {
+      "name": "Albania",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac832": {
+      "name": "Argentina",
+      "specializedItem": "steel",
+      "incomeTax": 12,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7089403bc4170a5d91b",
+        "6813b7089403bc4170a5d912",
+        "6813b7089403bc4170a5d918",
+        "6813b70b9403bc4170a5da80",
+        "6813b7089403bc4170a5d915",
+        "6813b7089403bc4170a5d90f",
+        "6813b7089403bc4170a5d921",
+        "6813b7089403bc4170a5d91e",
+        "696a81f5882256e1db118228"
+      ]
+    },
+    "6813b6d546e731854c7ac8a0": {
+      "name": "Suriname",
+      "specializedItem": "steak",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70b9403bc4170a5dab3"
+      ]
+    },
+    "6873d0ea1758b40e712b5f19": {
+      "name": "Eritrea",
+      "specializedItem": "lead",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11694e6b3b7989a4ca1"
+      ]
+    },
+    "6873d0ea1758b40e712b5f16": {
+      "name": "Djibouti",
+      "specializedItem": "coca",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 1,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f4c": {
+      "name": "Congo",
+      "specializedItem": "coca",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11594e6b3b7989a4c3e"
+      ]
+    },
+    "6873d0ea1758b40e712b5f79": {
+      "name": "Liberia",
+      "specializedItem": "iron",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f7c": {
+      "name": "Chad",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 1,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11794e6b3b7989a4cfb",
+        "6873d11894e6b3b7989a4d07",
+        "6873d11894e6b3b7989a4d01",
+        "6873d11894e6b3b7989a4d0a",
+        "6873d11894e6b3b7989a4d04",
+        "6873d11794e6b3b7989a4cf8",
+        "6873d11894e6b3b7989a4cfe"
+      ]
+    },
+    "6813b6d446e731854c7ac7a8": {
+      "name": "Spain",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7bc": {
+      "name": "Croatia",
+      "specializedItem": "steak",
+      "incomeTax": 12,
+      "productionPct": 26,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 26,
+      "regionIds": [
+        "6813b7079403bc4170a5d86d",
+        "6813b7059403bc4170a5d753",
+        "6813b7059403bc4170a5d78c",
+        "6813b7059403bc4170a5d79b",
+        "6813b7059403bc4170a5d798",
+        "6813b7079403bc4170a5d86a",
+        "6813b7079403bc4170a5d879",
+        "6813b7059403bc4170a5d74a",
+        "6813b7059403bc4170a5d750",
+        "6813b7059403bc4170a5d789",
+        "6813b7059403bc4170a5d79e",
+        "6813b7059403bc4170a5d747",
+        "6813b7059403bc4170a5d795",
+        "6813b7079403bc4170a5d873",
+        "6813b7059403bc4170a5d78f",
+        "6813b7059403bc4170a5d792",
+        "6813b7049403bc4170a5d738",
+        "696a81f5882256e1db118208"
+      ]
+    },
+    "6813b6d446e731854c7ac7f2": {
+      "name": "Sweden",
+      "specializedItem": "fish",
+      "incomeTax": 7,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7069403bc4170a5d7ce",
+        "6813b7069403bc4170a5d7d4",
+        "6813b7069403bc4170a5d7d1"
+      ]
+    },
+    "6813b6d546e731854c7ac855": {
+      "name": "Ecuador",
+      "specializedItem": null,
+      "incomeTax": 3.4,
+      "productionPct": 5,
+      "industrialism": -2,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7099403bc4170a5d9b4",
+        "6813b7099403bc4170a5d9b7",
+        "6813b7099403bc4170a5d9ba"
+      ]
+    },
+    "6813b6d546e731854c7ac87d": {
+      "name": "Australia",
+      "specializedItem": "steak",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac89c": {
+      "name": "Puerto Rico",
+      "specializedItem": "grain",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8be": {
+      "name": "Turkmenistan",
+      "specializedItem": "concrete",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b70c9403bc4170a5db0a",
+        "6813b70c9403bc4170a5dafe",
+        "6813b70c9403bc4170a5db04",
+        "6813b70c9403bc4170a5db01"
+      ]
+    },
+    "6813b6d546e731854c7ac8d1": {
+      "name": "Azerbaijan",
+      "specializedItem": "oil",
+      "incomeTax": 4,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70d9403bc4170a5db73",
+        "6813b70d9403bc4170a5db70",
+        "6813b70d9403bc4170a5db7c",
+        "6813b70d9403bc4170a5db7f",
+        "6813b70d9403bc4170a5db79",
+        "683ddd3d36dbc90b78047494",
+        "6813b70d9403bc4170a5db76"
+      ]
+    },
+    "6813b6d546e731854c7ac814": {
+      "name": "Montenegro",
+      "specializedItem": "ammo",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15b5": {
+      "name": "United Arab Emirates",
+      "specializedItem": "livestock",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af1603": {
+      "name": "Somalia",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5eed": {
+      "name": "Mauritania",
+      "specializedItem": "coca",
+      "incomeTax": 15,
+      "productionPct": 5,
+      "industrialism": 1,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11494e6b3b7989a4bf6",
+        "6873d11494e6b3b7989a4bf0",
+        "6873d11494e6b3b7989a4bf3"
+      ]
+    },
+    "6873d0ea1758b40e712b5f1f": {
+      "name": "Sierra Leone",
+      "specializedItem": "cocain",
+      "incomeTax": 2,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11794e6b3b7989a4ccf",
+        "6873d11794e6b3b7989a4cf2"
+      ]
+    },
+    "687eab339142f76907295e4e": {
+      "name": "Andorra",
+      "specializedItem": "cocain",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac862": {
+      "name": "India",
+      "specializedItem": "cookedFish",
+      "incomeTax": 7.5,
+      "productionPct": 30.5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 30.5,
+      "regionIds": [
+        "6813b70a9403bc4170a5d9d5",
+        "6813b70b9403bc4170a5dad1",
+        "6813b70d9403bc4170a5db8e",
+        "6813b70d9403bc4170a5dba0",
+        "6813b70d9403bc4170a5db9a",
+        "6813b7099403bc4170a5d9cf",
+        "6813b70a9403bc4170a5d9e4",
+        "6813b7089403bc4170a5d8e5",
+        "6813b70d9403bc4170a5dba6",
+        "6813b7089403bc4170a5d8d3",
+        "6813b70d9403bc4170a5db85",
+        "6813b70b9403bc4170a5dabc",
+        "6813b70d9403bc4170a5db88",
+        "683ddd3f36dbc90b780475cb",
+        "6813b70d9403bc4170a5dba3",
+        "6813b70d9403bc4170a5db91",
+        "6813b70a9403bc4170a5d9ea",
+        "6813b70a9403bc4170a5d9e7",
+        "6813b70d9403bc4170a5db94",
+        "6813b70d9403bc4170a5db8b",
+        "683ddd3d36dbc90b78047476",
+        "6813b70b9403bc4170a5dac2",
+        "6873d11794e6b3b7989a4ce6",
+        "6813b7099403bc4170a5d9d2",
+        "6813b70a9403bc4170a5d9d8",
+        "6813b70a9403bc4170a5d9ed",
+        "6813b70d9403bc4170a5dba9",
+        "683ddd3d36dbc90b7804746d",
+        "683ddd3d36dbc90b78047473",
+        "6813b70d9403bc4170a5db97",
+        "6813b70a9403bc4170a5d9de",
+        "6813b70a9403bc4170a5d9db",
+        "683ddd3f36dbc90b780475c8",
+        "6813b70c9403bc4170a5db07",
+        "683ddd3f36dbc90b780475a1",
+        "683ddd3d36dbc90b78047470"
+      ]
+    },
+    "6813b6d446e731854c7ac7b2": {
+      "name": "Hungary",
+      "specializedItem": "bread",
+      "incomeTax": 9,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b7049403bc4170a5d72f",
+        "6813b7049403bc4170a5d726",
+        "6813b7049403bc4170a5d72c",
+        "6813b70a9403bc4170a5d9fc",
+        "6813b7059403bc4170a5d756",
+        "6813b7049403bc4170a5d729",
+        "6813b70a9403bc4170a5d9f9",
+        "6813b70a9403bc4170a5d9ff",
+        "6813b70a9403bc4170a5da05"
+      ]
+    },
+    "6813b6d446e731854c7ac7b6": {
+      "name": "Romania",
+      "specializedItem": "steel",
+      "incomeTax": 9,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac82f": {
+      "name": "Brazil",
+      "specializedItem": "coca",
+      "incomeTax": 2.5,
+      "productionPct": 15,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 15,
+      "regionIds": [
+        "6813b7089403bc4170a5d900",
+        "6813b7089403bc4170a5d8f4",
+        "6813b7089403bc4170a5d909",
+        "6813b7099403bc4170a5d9c9",
+        "6813b7089403bc4170a5d8fa",
+        "6813b7089403bc4170a5d8f1",
+        "6813b7089403bc4170a5d8f7",
+        "6813b7089403bc4170a5d8fd",
+        "6813b70b9403bc4170a5dab0",
+        "6813b7089403bc4170a5d903",
+        "6813b7089403bc4170a5d90c",
+        "6813b70b9403bc4170a5da9e",
+        "6813b7089403bc4170a5d906",
+        "6813b7099403bc4170a5d9c0"
+      ]
+    },
+    "6813b6d546e731854c7ac82c": {
+      "name": "Philippines",
+      "specializedItem": "cocain",
+      "incomeTax": 8,
+      "productionPct": 25,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 25,
+      "regionIds": [
+        "6813b7089403bc4170a5d8d0",
+        "6813b7079403bc4170a5d8b2",
+        "6813b7089403bc4170a5d8cd",
+        "6813b7089403bc4170a5d8d9",
+        "6813b7089403bc4170a5d8ee",
+        "6813b7079403bc4170a5d8a6",
+        "6813b7079403bc4170a5d8c7",
+        "6813b7089403bc4170a5d8e8",
+        "6813b7079403bc4170a5d8ca",
+        "6813b7089403bc4170a5d8d6",
+        "683ddd3e36dbc90b780474c4",
+        "683ddd3e36dbc90b780474d6",
+        "6813b7079403bc4170a5d8b5",
+        "6813b7089403bc4170a5d8eb",
+        "683ddd3e36dbc90b780474be",
+        "6813b7079403bc4170a5d8be",
+        "683ddd3e36dbc90b780474d3",
+        "683ddd3e36dbc90b780474d9"
+      ]
+    },
+    "6813b6d546e731854c7ac842": {
+      "name": "Cyprus",
+      "specializedItem": "oil",
+      "incomeTax": 8,
+      "productionPct": 15,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 15,
+      "regionIds": [
+        "6813b7089403bc4170a5d94e",
+        "683ddd3e36dbc90b780474e2",
+        "683ddd3d36dbc90b7804749a"
+      ]
+    },
+    "6813b6d546e731854c7ac86e": {
+      "name": "Kenya",
+      "specializedItem": "oil",
+      "incomeTax": 9,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8da": {
+      "name": "Pakistan",
+      "specializedItem": "steak",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15db": {
+      "name": "Mozambique",
+      "specializedItem": null,
+      "incomeTax": 3,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3e36dbc90b78047519"
+      ]
+    },
+    "683ddd2c24b5a2e114af15fa": {
+      "name": "Nigeria",
+      "specializedItem": "petroleum",
+      "incomeTax": 10,
+      "productionPct": 10,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 10,
+      "regionIds": [
+        "683ddd3e36dbc90b78047534",
+        "683ddd3e36dbc90b7804753a",
+        "6873d11694e6b3b7989a4c9b",
+        "683ddd3e36dbc90b78047525",
+        "683ddd3e36dbc90b78047531",
+        "6873d11694e6b3b7989a4c95",
+        "683ddd3e36dbc90b78047537",
+        "683ddd3e36dbc90b7804752b",
+        "683ddd3e36dbc90b78047528"
+      ]
+    },
+    "683ddd2c24b5a2e114af1606": {
+      "name": "Syria",
+      "specializedItem": "oil",
+      "incomeTax": 7,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "683ddd3f36dbc90b78047568",
+        "683ddd3f36dbc90b78047571",
+        "683ddd3f36dbc90b78047565",
+        "683ddd3f36dbc90b7804756b",
+        "683ddd3f36dbc90b7804756e"
+      ]
+    },
+    "683ddd2c24b5a2e114af1609": {
+      "name": "Thailand",
+      "specializedItem": "cocain",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f46": {
+      "name": "Malawi",
+      "specializedItem": "steak",
+      "incomeTax": 3,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11794e6b3b7989a4cda",
+        "6873d11794e6b3b7989a4cdd"
+      ]
+    },
+    "6813b6d446e731854c7ac79e": {
+      "name": "United Kingdom",
+      "specializedItem": "livestock",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac889": {
+      "name": "Bahamas",
+      "specializedItem": "bread",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7ba": {
+      "name": "Serbia",
+      "specializedItem": "steak",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac820": {
+      "name": "China",
+      "specializedItem": "cookedFish",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7079403bc4170a5d8a9",
+        "6813b7079403bc4170a5d8a3",
+        "6813b7079403bc4170a5d8af",
+        "6813b7079403bc4170a5d8ac",
+        "6813b7079403bc4170a5d8b8"
+      ]
+    },
+    "6813b6d546e731854c7ac868": {
+      "name": "Russia",
+      "specializedItem": "limestone",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac899": {
+      "name": "Jamaica",
+      "specializedItem": null,
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d546e731854c7ac8b2": {
+      "name": "El Salvador",
+      "specializedItem": "iron",
+      "incomeTax": 2,
+      "productionPct": 0,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 30,
+      "regionIds": [
+        "6813b70c9403bc4170a5dae9"
+      ]
+    },
+    "6813b6d546e731854c7ac8d7": {
+      "name": "Afghanistan",
+      "specializedItem": "ammo",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7ac": {
+      "name": "Austria",
+      "specializedItem": "oil",
+      "incomeTax": 7,
+      "productionPct": 10.5,
+      "industrialism": 2,
+      "ethicsBonus": 0,
+      "totalBonus": 10.5,
+      "regionIds": [
+        "6813b7039403bc4170a5d68a",
+        "6813b7049403bc4170a5d73b",
+        "6813b7049403bc4170a5d70b",
+        "6813b7059403bc4170a5d73e",
+        "6813b7049403bc4170a5d711",
+        "6813b7049403bc4170a5d70e",
+        "6813b7049403bc4170a5d6e1",
+        "6813b7049403bc4170a5d708",
+        "6813b7059403bc4170a5d744",
+        "6813b7049403bc4170a5d6de"
+      ]
+    },
+    "683ddd2c24b5a2e114af15bd": {
+      "name": "Ethiopia",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 5,
+      "productionPct": 10,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 40,
+      "regionIds": [
+        "683ddd3f36dbc90b7804755f",
+        "683ddd3d36dbc90b78047479",
+        "683ddd3d36dbc90b78047485",
+        "683ddd3f36dbc90b78047553",
+        "683ddd3d36dbc90b7804747f",
+        "683ddd3d36dbc90b78047482",
+        "683ddd3f36dbc90b7804755c",
+        "683ddd3f36dbc90b78047562",
+        "683ddd3f36dbc90b78047559",
+        "683ddd3d36dbc90b7804747c",
+        "683ddd3f36dbc90b78047556"
+      ]
+    },
+    "683ddd2c24b5a2e114af15bb": {
+      "name": "Bhutan",
+      "specializedItem": "cocain",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": -1,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af15c1": {
+      "name": "Israel",
+      "specializedItem": "bread",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "683ddd2c24b5a2e114af1600": {
+      "name": "Palestine",
+      "specializedItem": "ammo",
+      "incomeTax": 10,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 35,
+      "regionIds": [
+        "683ddd3f36dbc90b7804754f",
+        "683ddd3d36dbc90b7804749d",
+        "683ddd3f36dbc90b7804754c"
+      ]
+    },
+    "683ddd2c24b5a2e114af160f": {
+      "name": "Yemen",
+      "specializedItem": "petroleum",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 1,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "683ddd3f36dbc90b7804759e",
+        "683ddd3f36dbc90b78047598",
+        "683ddd3f36dbc90b78047592",
+        "683ddd3f36dbc90b78047595",
+        "683ddd3f36dbc90b7804759b"
+      ]
+    },
+    "6873d0ea1758b40e712b5ef5": {
+      "name": "Cameroon",
+      "specializedItem": "lead",
+      "incomeTax": 8,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11694e6b3b7989a4c8f"
+      ]
+    },
+    "6873d0ea1758b40e712b5f2b": {
+      "name": "Guinea",
+      "specializedItem": "grain",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11794e6b3b7989a4cbf",
+        "6873d11694e6b3b7989a4cb6",
+        "6873d11694e6b3b7989a4cb9"
+      ]
+    },
+    "6873d0ea1758b40e712b5f5c": {
+      "name": "Lesotho",
+      "specializedItem": "steel",
+      "incomeTax": 4,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11594e6b3b7989a4c56"
+      ]
+    },
+    "6873d0ea1758b40e712b5f59": {
+      "name": "Eswatini",
+      "specializedItem": null,
+      "incomeTax": 4.5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f63": {
+      "name": "Vanuatu",
+      "specializedItem": "cookedFish",
+      "incomeTax": 5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6873d11594e6b3b7989a4c5f"
+      ]
+    },
+    "6873d0ea1758b40e712b5f60": {
+      "name": "Solomon Islands",
+      "specializedItem": "ammo",
+      "incomeTax": 6.5,
+      "productionPct": 5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 5,
+      "regionIds": [
+        "6813b70b9403bc4170a5da7a",
+        "6873d11594e6b3b7989a4c5c"
+      ]
+    },
+    "6873d0ea1758b40e712b5f6a": {
+      "name": "Nepal",
+      "specializedItem": "livestock",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6873d11794e6b3b7989a4ce3",
+        "6873d11794e6b3b7989a4ce0"
+      ]
+    },
+    "6873d0ea1758b40e712b5f76": {
+      "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+      "specializedItem": "heavyAmmo",
+      "incomeTax": 12,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f22": {
+      "name": "Togo",
+      "specializedItem": "lightAmmo",
+      "incomeTax": 1,
+      "productionPct": 5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 35,
+      "regionIds": [
+        "6873d11494e6b3b7989a4be4",
+        "6873d11894e6b3b7989a4d0d",
+        "6873d11394e6b3b7989a4be1"
+      ]
+    },
+    "687eab339142f76907295e50": {
+      "name": "Bahrain",
+      "specializedItem": "steel",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7a0": {
+      "name": "Netherlands",
+      "specializedItem": "cocain",
+      "incomeTax": 8,
+      "productionPct": 10,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 10,
+      "regionIds": [
+        "6813b7069403bc4170a5d83a",
+        "6813b7039403bc4170a5d671",
+        "6813b7039403bc4170a5d679",
+        "6813b7069403bc4170a5d831",
+        "6813b7039403bc4170a5d675",
+        "6813b7069403bc4170a5d7e0",
+        "6813b7069403bc4170a5d7d7",
+        "6813b7069403bc4170a5d837",
+        "6813b7069403bc4170a5d7dd",
+        "6813b7069403bc4170a5d7da",
+        "6813b7069403bc4170a5d834"
+      ]
+    },
+    "6813b6d446e731854c7ac7a4": {
+      "name": "Belgium",
+      "specializedItem": "steak",
+      "incomeTax": 10,
+      "productionPct": 15,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 15,
+      "regionIds": [
+        "6813b7039403bc4170a5d6b1",
+        "6813b7039403bc4170a5d6a2",
+        "6813b7039403bc4170a5d67c",
+        "6813b7039403bc4170a5d6ab",
+        "6813b7039403bc4170a5d6a8",
+        "6813b7069403bc4170a5d82e",
+        "6813b7069403bc4170a5d825",
+        "6813b7039403bc4170a5d67f",
+        "6813b7039403bc4170a5d683",
+        "6813b7039403bc4170a5d6a5",
+        "6813b7069403bc4170a5d828",
+        "6813b7039403bc4170a5d6ae",
+        "6813b7069403bc4170a5d82b"
+      ]
+    },
+    "6813b6d446e731854c7ac7e2": {
+      "name": "Estonia",
+      "specializedItem": "limestone",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "6813b7059403bc4170a5d777",
+        "6813b7059403bc4170a5d77a",
+        "6813b7059403bc4170a5d774"
+      ]
+    },
+    "6813b6d546e731854c7ac88d": {
+      "name": "Dominican Republic",
+      "specializedItem": "limestone",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac79c": {
+      "name": "Germany",
+      "specializedItem": "cookedFish",
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6813b6d446e731854c7ac7eb": {
+      "name": "Turkiye",
+      "specializedItem": "steak",
+      "incomeTax": 12,
+      "productionPct": 15.5,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 15.5,
+      "regionIds": [
+        "6813b7059403bc4170a5d7a4",
+        "6813b7059403bc4170a5d7aa",
+        "6813b7059403bc4170a5d7a1",
+        "6813b70a9403bc4170a5d9f3",
+        "6813b70a9403bc4170a5da11",
+        "6813b70a9403bc4170a5da08",
+        "6813b7059403bc4170a5d7b0",
+        "6813b7059403bc4170a5d7ad",
+        "683ddd3d36dbc90b7804748b",
+        "6813b70a9403bc4170a5d9f0",
+        "6813b7059403bc4170a5d7a7",
+        "6813b7059403bc4170a5d7b3",
+        "6813b70d9403bc4170a5db82",
+        "683ddd3d36dbc90b78047488",
+        "6813b70a9403bc4170a5d9f6",
+        "683ddd3d36dbc90b7804748e",
+        "683ddd3d36dbc90b78047491"
+      ]
+    },
+    "6813b6d546e731854c7ac84e": {
+      "name": "Tunisia",
+      "specializedItem": "ammo",
+      "incomeTax": 9.5,
+      "productionPct": 15,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 45,
+      "regionIds": [
+        "6813b7049403bc4170a5d6ed",
+        "6813b7049403bc4170a5d6f3",
+        "6813b7049403bc4170a5d705",
+        "687eab418fc7f0dfa1d2b985",
+        "6873d11594e6b3b7989a4c41",
+        "6813b7099403bc4170a5d990",
+        "6813b7099403bc4170a5d984",
+        "6813b7099403bc4170a5d996",
+        "6813b7049403bc4170a5d6e4",
+        "6813b7099403bc4170a5d993",
+        "6813b7049403bc4170a5d6f6",
+        "6813b7099403bc4170a5d987",
+        "696a81f5882256e1db118218"
+      ]
+    },
+    "6813b6d546e731854c7ac865": {
+      "name": "Ukraine",
+      "specializedItem": "cookedFish",
+      "incomeTax": 10,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "6873d0ea1758b40e712b5f1c": {
+      "name": "Guinea-Bissau",
+      "specializedItem": "ammo",
+      "incomeTax": 7.5,
+      "productionPct": 20.5,
+      "industrialism": 2,
+      "ethicsBonus": 30,
+      "totalBonus": 50.5,
+      "regionIds": [
+        "6873d11394e6b3b7989a4bdb",
+        "6873d11594e6b3b7989a4c6b",
+        "6873d11794e6b3b7989a4cc8",
+        "6873d11794e6b3b7989a4cbc",
+        "6873d11494e6b3b7989a4bed",
+        "6873d11494e6b3b7989a4bff",
+        "6873d11394e6b3b7989a4bd2",
+        "6873d11694e6b3b7989a4cb3",
+        "6873d11494e6b3b7989a4bf9",
+        "6873d11394e6b3b7989a4bd5"
+      ]
+    },
+    "69614d0e5d798a861630c58e": {
+      "name": "Vatican",
+      "specializedItem": "fish",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "696a81da63e2489f47e5a28a": {
+      "name": "Comoros",
+      "specializedItem": null,
+      "incomeTax": 5,
+      "productionPct": 0,
+      "industrialism": 1,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": [
+        "683ddd3f36dbc90b780475dd"
+      ]
+    },
+    "696a81da63e2489f47e5a28c": {
+      "name": "Liechtenstein",
+      "specializedItem": null,
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    },
+    "696a81da63e2489f47e5a28e": {
+      "name": "Mauritius",
+      "specializedItem": "livestock",
+      "incomeTax": 1,
+      "productionPct": 0,
+      "industrialism": 0,
+      "ethicsBonus": 0,
+      "totalBonus": 0,
+      "regionIds": []
+    }
+  }
+}

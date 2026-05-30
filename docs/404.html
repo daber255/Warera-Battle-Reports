@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warera Reports</title>
+  <script>
+    (function(){
+      var base = document.querySelector('base') && document.querySelector('base').href || './';
+      sessionStorage.redirect = location.href;
+      location.replace(base);
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="./">Weiter zur Startseite</a></p>
+</body>
+</html>
