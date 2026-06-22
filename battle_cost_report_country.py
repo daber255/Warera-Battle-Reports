@@ -108,33 +108,58 @@ async def analyze_battle(client, battle_id, mu_names):
         print(f"  ERROR contracts for {battle_id}: {e}", flush=True)
         return None
 
-    # MU money ranking
+    # MU money ranking (paginated)
     mu_data = {}
     for side in ("attacker", "defender"):
+        all_items = []
         try:
-            raw = await call_with_retry(
-                lambda s=side: client._http.get("battleRanking.getRanking", {
-                    "battleId": battle_id, "dataType": "money", "type": "mu", "side": s,
-                })
-            )
-            mu_data[side] = extract_items(raw)
+            cursor = None
+            while True:
+                params = {
+                    "battleId": battle_id, "dataType": "money", "type": "mu", "side": side,
+                    "limit": 100,
+                }
+                if cursor:
+                    params["cursor"] = cursor
+                raw = await call_with_retry(
+                    lambda p=params.copy(): client._http.get("battleRanking.getRanking", p)
+                )
+                items = extract_items(raw)
+                if not items:
+                    break
+                all_items.extend(items)
+                cursor = raw.get("nextCursor")
+                if not cursor:
+                    break
         except Exception:
-            mu_data[side] = []
+            pass
+        mu_data[side] = all_items
 
-    # MU damage ranking
+    # MU damage ranking (paginated)
     mu_damage = {"attacker": {}, "defender": {}}
     for side in ("attacker", "defender"):
         try:
-            raw = await call_with_retry(
-                lambda s=side: client._http.get("battleRanking.getRanking", {
-                    "battleId": battle_id, "dataType": "damage", "type": "mu", "side": s,
-                })
-            )
-            items = extract_items(raw)
-            for e in items:
-                mid = e.get("mu")
-                if mid:
-                    mu_damage[side][mid] = float(e.get("value") or 0)
+            cursor = None
+            while True:
+                params = {
+                    "battleId": battle_id, "dataType": "damage", "type": "mu", "side": side,
+                    "limit": 100,
+                }
+                if cursor:
+                    params["cursor"] = cursor
+                raw = await call_with_retry(
+                    lambda p=params.copy(): client._http.get("battleRanking.getRanking", p)
+                )
+                items = extract_items(raw)
+                if not items:
+                    break
+                for e in items:
+                    mid = e.get("mu")
+                    if mid:
+                        mu_damage[side][mid] = float(e.get("value") or 0)
+                cursor = raw.get("nextCursor")
+                if not cursor:
+                    break
         except Exception:
             pass
 

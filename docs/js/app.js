@@ -274,17 +274,12 @@ async function analyzeBattle(battleId) {
     battleId, status: 'won', limit: 50,
   });
 
-  const [attMoneyRaw, defMoneyRaw, attDmgRaw, defDmgRaw] = await Promise.all([
-    Warera.getRanking({ battleId, dataType: 'money', type: 'mu', side: 'attacker' }),
-    Warera.getRanking({ battleId, dataType: 'money', type: 'mu', side: 'defender' }),
-    Warera.getRanking({ battleId, dataType: 'damage', type: 'mu', side: 'attacker' }),
-    Warera.getRanking({ battleId, dataType: 'damage', type: 'mu', side: 'defender' }),
+  const [attMoney, defMoney, attDmg, defDmg] = await Promise.all([
+    Warera.getAllRanking({ battleId, dataType: 'money', type: 'mu', side: 'attacker', limit: 100 }),
+    Warera.getAllRanking({ battleId, dataType: 'money', type: 'mu', side: 'defender', limit: 100 }),
+    Warera.getAllRanking({ battleId, dataType: 'damage', type: 'mu', side: 'attacker', limit: 100 }),
+    Warera.getAllRanking({ battleId, dataType: 'damage', type: 'mu', side: 'defender', limit: 100 }),
   ]);
-
-  const attMoney = extractItems(attMoneyRaw);
-  const defMoney = extractItems(defMoneyRaw);
-  const attDmg = extractItems(attDmgRaw);
-  const defDmg = extractItems(defDmgRaw);
 
   const muDamage = { attacker: {}, defender: {} };
   for (const e of attDmg) { const mid = e.mu; if (mid) muDamage.attacker[mid] = parseFloat(e.value) || 0; }

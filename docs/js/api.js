@@ -191,6 +191,10 @@ const Warera = {
     return apiCall('battleRanking.getRanking', params);
   },
 
+  async getAllRanking(params) {
+    return apiCallAll('battleRanking.getRanking', params, extractItems);
+  },
+
   async getMuById(muId) {
     return apiCall('mu.getById', { muId });
   },

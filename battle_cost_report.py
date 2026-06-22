@@ -120,31 +120,58 @@ async def main():
             if not cursor:
                 break
 
-        # ── 3. MU money ranking per side ──────────────────────
+        # ── 3. MU money ranking per side (paginated) ─────────
         print("Fetching MU money ranking per side...", flush=True)
         mu_data = {}
         for side, label in [("attacker", att_name), ("defender", def_name)]:
-            raw = await call_with_retry(
-                lambda s=side: client._http.get("battleRanking.getRanking", {
-                    "battleId": battle_id, "dataType": "money", "type": "mu", "side": s,
-                })
-            )
-            mu_data[side] = extract_items(raw)
+            all_items = []
+            cursor = None
+            while True:
+                params = {
+                    "battleId": battle_id, "dataType": "money", "type": "mu", "side": side,
+                    "limit": 100,
+                }
+                if cursor:
+                    params["cursor"] = cursor
+                raw = await call_with_retry(
+                    lambda p=params.copy(): client._http.get("battleRanking.getRanking", p)
+                )
+                items = extract_items(raw)
+                if not items:
+                    break
+                all_items.extend(items)
+                cursor = raw.get("nextCursor")
+                if not cursor:
+                    break
+            mu_data[side] = all_items
             total = sum(float(e.get("value") or 0) for e in mu_data[side])
             print(f"  {label}: {len(mu_data[side])} MUs — {total:.2f} btc")
 
-        # ── 4. MU damage ranking per side ────────────────────
+        # ── 4. MU damage ranking per side (paginated) ────────
         print("Fetching MU damage ranking per side...", flush=True)
         mu_damage = {"attacker": {}, "defender": {}}
         for side, label in [("attacker", att_name), ("defender", def_name)]:
-            raw = await call_with_retry(
-                lambda s=side: client._http.get("battleRanking.getRanking", {
-                    "battleId": battle_id, "dataType": "damage", "type": "mu", "side": s,
-                })
-            )
-            items = extract_items(raw)
-            print(f"  {label}: {len(items)} MUs")
-            for e in items:
+            all_items = []
+            cursor = None
+            while True:
+                params = {
+                    "battleId": battle_id, "dataType": "damage", "type": "mu", "side": side,
+                    "limit": 100,
+                }
+                if cursor:
+                    params["cursor"] = cursor
+                raw = await call_with_retry(
+                    lambda p=params.copy(): client._http.get("battleRanking.getRanking", p)
+                )
+                items = extract_items(raw)
+                if not items:
+                    break
+                all_items.extend(items)
+                cursor = raw.get("nextCursor")
+                if not cursor:
+                    break
+            print(f"  {label}: {len(all_items)} MUs")
+            for e in all_items:
                 mid = e.get("mu")
                 if mid:
                     mu_damage[side][mid] = float(e.get("value") or 0)
