@@ -943,7 +943,6 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
       tableRows += `<tr${rowClass}>
         <td><span class="tier-badge tier-${tier}"${tooltip ? ` title="${tooltip}"` : ''}>${TIER_RARITY[tier]}</span></td>
         <td class="text-mono">${info.damage.toLocaleString()}</td>
-        <td style="font-family:var(--font-mono);font-size:0.8rem;">${info.item}</td>
         <td style="font-size:0.8rem;color:var(--text-dim);">#${info.rank}</td>
         <td class="text-mono" style="${reached ? 'color:var(--green);' : 'color:var(--orange);'}">${reached ? '✓' : (delta != null ? '+' + delta.toLocaleString() : '—')}</td>
         <td class="text-mono" style="font-size:0.75rem;">${btcPer1k != null ? btcPer1k.toFixed(6) : '—'}</td>
@@ -951,7 +950,7 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
     }
 
     if (!tableRows) {
-      tableRows = '<tr><td colspan="6" style="text-align:center;color:var(--text-dim);padding:20px;">No loot items in this round.</td></tr>';
+      tableRows = '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">No loot items in this round.</td></tr>';
     }
 
     let lootInfo;
@@ -986,7 +985,6 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
           <thead><tr>
             <th>Tier</th>
             <th>Min. Damage</th>
-            <th>Item</th>
             <th>Rank</th>
             <th>Status</th>
             <th>BTC/1k</th>
@@ -1027,7 +1025,7 @@ function formatDuration(ms) {
 }
 
 function setFetchingState(mode, fetching) {
-  const labels = { battle: 'Abrufen', country: 'Report erstellen', loot: 'Break Points' };
+  const labels = { battle: 'Abrufen', country: 'Report erstellen', loot: 'Search Battles' };
   const btn = mode === 'battle' ? $('battle-fetch-btn') : mode === 'country' ? $('country-fetch-btn') : $('loot-fetch-btn');
   if (btn) {
     btn.disabled = fetching;
