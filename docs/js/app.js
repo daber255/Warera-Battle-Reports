@@ -935,7 +935,7 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
       const btcPer1k = price ? (price / info.damage * 1000) : null;
       const craft = { 1: {s:6,st:1}, 2: {s:18,st:1}, 3: {s:54,st:4}, 4: {s:162,st:8}, 5: {s:486,st:16}, 6: {s:1460,st:32} }[tier];
       const tooltip = price && craft
-        ? `${craft.s} scrap × ${scrapPrice.toFixed(4)} + ${craft.st} steel × ${steelPrice.toFixed(4)} = ${price.toFixed(6)} BTC`
+        ? `${craft.s} scrap × ${scrapPrice.toFixed(3)} + ${craft.st} steel × ${steelPrice.toFixed(3)} = ${price.toFixed(3)} BTC`
         : '';
 
       const rowClass = projectedTier === tier ? ' class="loot-projected-row"' : '';
@@ -945,7 +945,7 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
         <td class="text-mono">${info.damage.toLocaleString()}</td>
         <td style="font-size:0.8rem;color:var(--text-dim);">#${info.rank}</td>
         <td class="text-mono" style="${reached ? 'color:var(--green);' : 'color:var(--orange);'}">${reached ? '✓' : (delta != null ? '+' + delta.toLocaleString() : '—')}</td>
-        <td class="text-mono" style="font-size:0.75rem;">${btcPer1k != null ? btcPer1k.toFixed(6) : '—'}</td>
+        <td class="text-mono" style="font-size:0.75rem;">${btcPer1k != null ? btcPer1k.toFixed(3) : '—'}</td>
       </tr>`;
     }
 
@@ -957,7 +957,7 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
     if (userId && projectedDamage) {
       const existingDmg = r.existingDmg || 0;
       const totalDmg = existingDmg + projectedDamage;
-      lootInfo = `<span><strong>Rank #${userEntry?.rank || '?'}</strong> — ${existingDmg.toLocaleString()} + ${projectedDamage.toLocaleString()} = ${totalDmg.toLocaleString()} → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(6)} BTC)</span>`;
+      lootInfo = `<span><strong>Rank #${userEntry?.rank || '?'}</strong> — ${existingDmg.toLocaleString()} + ${projectedDamage.toLocaleString()} = ${totalDmg.toLocaleString()} → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(3)} BTC)</span>`;
     } else if (userId && userEntry) {
       lootInfo = userTier > 0
         ? `<span><strong>Rank #${userEntry.rank}</strong> — ${userDmg.toLocaleString()} Damage — Item: <strong>${userEntry.lootItem.code}</strong> (${TIER_RARITY[userTier]})</span>`
@@ -965,7 +965,7 @@ function renderLootResult(results, userId, userName, pricesObj, projectedDamage)
     } else if (userId && !userEntry) {
       lootInfo = '<span style="color:var(--orange);">Not in this round\'s ranking</span>';
     } else if (projectedDamage) {
-      lootInfo = `<span>Est. <strong>${projectedDamage.toLocaleString()}</strong> damage → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(6)} BTC)</span>`;
+      lootInfo = `<span>Est. <strong>${projectedDamage.toLocaleString()}</strong> damage → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(3)} BTC)</span>`;
     } else {
       lootInfo = '';
     }
