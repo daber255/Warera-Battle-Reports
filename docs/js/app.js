@@ -759,7 +759,7 @@ const TIER_RARITY = ['None', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 
 async function fetchLootBreakPoints() {
   const userId = $('loot-user-id').value.trim();
   const dmgInput = $('loot-damage').value.trim();
-  const projectedDamage = dmgInput ? parseFloat(dmgInput) : null;
+  const projectedDamage = dmgInput ? parseFloat(dmgInput) * 1000 : null;
   if (!getApiKey()) return showError('loot-err', 'Please enter your API token first.');
 
   setFetchingState('loot', true);
