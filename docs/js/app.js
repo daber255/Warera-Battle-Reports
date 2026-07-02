@@ -742,6 +742,8 @@ function renderTopContracts(title, contracts) {
 
 // ─── Loot Mode ──────────────────────────────────
 function setupLootMode() {
+  const saved = localStorage.getItem('warera_loot_user_id');
+  if (saved) $('loot-user-id').value = saved;
   $('loot-fetch-btn').addEventListener('click', fetchLootBreakPoints);
   $('loot-user-id').addEventListener('keydown', e => { if (e.key === 'Enter') fetchLootBreakPoints(); });
 }
@@ -758,6 +760,7 @@ const TIER_RARITY = ['None', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 
 
 async function fetchLootBreakPoints() {
   const userId = $('loot-user-id').value.trim();
+  localStorage.setItem('warera_loot_user_id', userId);
   const dmgInput = $('loot-damage').value.trim();
   const projectedDamage = dmgInput ? parseFloat(dmgInput) * 1000 : null;
   if (!getApiKey()) return showError('loot-err', 'Please enter your API token first.');
