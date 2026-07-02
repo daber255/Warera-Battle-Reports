@@ -747,6 +747,13 @@ function setupLootMode() {
   if (saved) $('loot-user-id').value = saved;
   $('loot-fetch-btn').addEventListener('click', fetchLootBreakPoints);
   $('loot-user-id').addEventListener('keydown', e => { if (e.key === 'Enter') fetchLootBreakPoints(); });
+  $('loot-sort')?.addEventListener('click', () => {
+    const btn = $('loot-sort');
+    const mode = btn.dataset.sort === 'btc-total' ? 'btc-per-1k' : 'btc-total';
+    btn.dataset.sort = mode;
+    btn.textContent = mode === 'btc-total' ? 'Sort: BTC Total' : 'Sort: BTC/1k';
+    applyLootSort();
+  });
 }
 
 function getTierFromCode(code) {
@@ -758,6 +765,26 @@ function getTierFromCode(code) {
 }
 
 const TIER_RARITY = ['None', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'];
+
+let _lootState = null;
+
+function sortLootResults(results, sortMode) {
+  results.sort((a, b) => {
+    if (sortMode === 'btc-total')
+      return (b.projectedBtcTotal || 0) - (a.projectedBtcTotal || 0);
+    return (b.projectedBtcPer1k || 0) - (a.projectedBtcPer1k || 0);
+  });
+}
+
+function getLootSortMode() {
+  return $('loot-sort')?.dataset.sort || 'btc-per-1k';
+}
+
+function applyLootSort() {
+  if (!_lootState) return;
+  sortLootResults(_lootState.results, getLootSortMode());
+  renderLootResult(_lootState.results, _lootState.userId, _lootState.userName, _lootState.pricesObj, _lootState.projectedDamage);
+}
 
 async function fetchLootBreakPoints() {
   const userId = $('loot-user-id').value.trim();
@@ -877,11 +904,14 @@ async function fetchLootBreakPoints() {
         r.projectedTier = projTier;
         r.existingDmg = existingDmg;
         r.projectedBtcPer1k = price && projDmg ? (price / projDmg * 1000) : 0;
+        r.projectedBtcTotal = price;
       }
-      filteredResults.sort((a, b) => b.projectedBtcPer1k - a.projectedBtcPer1k);
+      sortLootResults(filteredResults, getLootSortMode());
     }
 
     renderLootResult(filteredResults, userId, userName, { scrapPrice, steelPrice, craftCost }, projectedDamage);
+    _lootState = { results: filteredResults, userId, userName, pricesObj: { scrapPrice, steelPrice, craftCost }, projectedDamage };
+    $('loot-sort').style.display = projectedDamage ? '' : 'none';
   } catch (err) {
     showError('loot-err', `Error: ${err.message}`);
     $('loot-result').innerHTML = '';
