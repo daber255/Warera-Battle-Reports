@@ -172,6 +172,7 @@ async function loadRecentBattles() {
         const att = b.attacker || {};
         const def = b.defender || {};
         const totalDmg = (att.damages || 0) + (def.damages || 0);
+        if (!att.country && !def.country) continue;
         withDamage.push({
           id: b._id,
           date: (b.createdAt || '').slice(0, 10),
