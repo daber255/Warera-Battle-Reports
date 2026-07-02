@@ -202,4 +202,16 @@ const Warera = {
   async search(query) {
     return apiCall('search.searchAnything', { searchText: query });
   },
+
+  async getUserLite(userId) {
+    return apiCall('user.getUserLite', { userId });
+  },
+
+  async getRoundById(roundId) {
+    return apiCall('round.getById', { roundId });
+  },
+
+  async getItemPrices() {
+    return apiCall('itemTrading.getPrices', {});
+  },
 };

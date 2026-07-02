@@ -21,6 +21,7 @@ async function init() {
 
   setupBattleMode();
   setupCountryMode();
+  setupLootMode();
   setupModeToggle();
   setupTokenInput();
 
@@ -31,7 +32,7 @@ async function init() {
 // ─── Countries ───────────────────────────────────
 async function loadCountries() {
   const select = $('country-select');
-  select.innerHTML = '<option value="">Laden...</option>';
+  select.innerHTML = '<option value="">Loading...</option>';
 
   try {
     const data = await Warera.getAllCountries();
@@ -55,7 +56,7 @@ async function loadCountries() {
 
   countriesData.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
   countryMap = {};
-  select.innerHTML = '<option value="">— Land wählen —</option>';
+  select.innerHTML = '<option value="">— Select country —</option>';
   let germanyIdx = -1;
   for (let i = 0; i < countriesData.length; i++) {
     const c = countriesData[i];
@@ -108,7 +109,7 @@ function setupTokenInput() {
     } else {
       clearApiKey();
       updateTokenStatus(false);
-      $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">API-Token eingeben für aktuelle Schlachten.</div>';
+    $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">Enter API token for current battles.</div>';
     }
   });
 }
@@ -116,10 +117,10 @@ function setupTokenInput() {
 function updateTokenStatus(set) {
   const el = $('token-status');
   if (set) {
-    el.innerHTML = '<span class="dot set"></span> Token gesetzt';
+    el.innerHTML = '<span class="dot set"></span> Token set';
     el.style.color = 'var(--green)';
   } else {
-    el.innerHTML = '<span class="dot unset"></span> Kein Token';
+    el.innerHTML = '<span class="dot unset"></span> No token';
     el.style.color = 'var(--red)';
   }
 }
@@ -134,6 +135,7 @@ function setupModeToggle() {
       document.querySelectorAll('.mode-view').forEach(v => v.classList.add('hidden'));
       $(`view-${currentMode}`).classList.remove('hidden');
       $('recent-battles').classList.toggle('hidden', currentMode !== 'battle');
+      ['battle-result', 'country-result', 'loot-result'].forEach(id => $(id).innerHTML = '');
     });
   });
 }
@@ -147,7 +149,7 @@ function setupBattleMode() {
 // ─── Recent Top Battles ─────────────────────────
 async function loadRecentBattles() {
   if (!getApiKey()) {
-    $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">API-Token eingeben für aktuelle Schlachten.</div>';
+    $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">Enter API token for current battles.</div>';
     return;
   }
 
@@ -157,7 +159,7 @@ async function loadRecentBattles() {
   try {
     const battles = await Warera.getAllBattles({ limit: 50, direction: 'backward' }, cutoff);
     if (!battles.length) {
-      $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">Keine Schlachten in den letzten 3 Tagen.</div>';
+      $('recent-battles-list').innerHTML = '<div class="text-dim" style="padding:8px;">No battles in the last 3 days.</div>';
       return;
     }
 
@@ -195,7 +197,7 @@ async function loadRecentBattles() {
 
     renderRecentBattles(top);
   } catch (err) {
-    $('recent-battles-list').innerHTML = `<div class="text-dim" style="padding:8px;">Fehler beim Laden: ${err.message}</div>`;
+    $('recent-battles-list').innerHTML = `<div class="text-dim" style="padding:8px;">Error loading: ${err.message}</div>`;
   }
 }
 
@@ -227,21 +229,21 @@ function renderRecentBattles(list) {
 
 async function fetchBattleReport() {
   const battleId = $('battle-id').value.trim();
-  if (!battleId) return showError('battle-err', 'Bitte gib eine Battle-ID ein.');
-  if (!getApiKey()) return showError('battle-err', 'Bitte gib zuerst deinen API-Token ein.');
+  if (!battleId) return showError('battle-err', 'Please enter a Battle ID.');
+  if (!getApiKey()) return showError('battle-err', 'Please enter your API token first.');
 
   isFetching = true;
   setFetchingState('battle', true);
   hideError('battle-err');
   $('empty-state').classList.add('hidden');
-  $('battle-result').innerHTML = '<div class="loading"><div class="spinner"></div> Battle-Daten werden geladen...</div>';
+  $('battle-result').innerHTML = '<div class="loading"><div class="spinner"></div> Loading battle data...</div>';
 
   try {
     const result = await analyzeBattle(battleId);
     battleResults = result;
     renderBattleResult(result);
   } catch (err) {
-    showError('battle-err', `Fehler: ${err.message}`);
+    showError('battle-err', `Error: ${err.message}`);
     $('battle-result').innerHTML = '';
   } finally {
     isFetching = false;
@@ -358,21 +360,21 @@ function renderBattleResult(r) {
       <div>
         <div class="battle-title">${r.attCountry} vs ${r.defCountry}</div>
         <div class="battle-meta">
-          <span><strong>Datum:</strong> ${r.date}</span>
+          <span><strong>Date:</strong> ${r.date}</span>
           <span><strong>Region:</strong> ${r.attRegion} / ${r.defRegion}</span>
           <span><strong>ID:</strong> <code>${r.id}</code></span>
-          ${r.isActive ? '<span style="color:var(--green)">● Aktiv</span>' : ''}
+          ${r.isActive ? '<span style="color:var(--green)">● Active</span>' : ''}
         </div>
       </div>
     </div>
 
     <div class="dashboard-grid">
-      ${statCard(r.attCountry + ' — Gesamt', r.attTotal.toFixed(2), 'btc', attColor)}
+      ${statCard(r.attCountry + ' — Total', r.attTotal.toFixed(2), 'btc', attColor)}
       ${statCard(r.attCountry + ' — Bounties', r.attBounties.toFixed(2), 'btc', 'accent')}
-      ${statCard(r.attCountry + ' — Contracts', r.attContractSum.toFixed(2), 'btc (' + r.attCompleted.length + ' Stück)', 'accent')}
-      ${statCard(r.defCountry + ' — Gesamt', r.defTotal.toFixed(2), 'btc', defColor)}
+      ${statCard(r.attCountry + ' — Contracts', r.attContractSum.toFixed(2), 'btc (' + r.attCompleted.length + ' units)', 'accent')}
+      ${statCard(r.defCountry + ' — Total', r.defTotal.toFixed(2), 'btc', defColor)}
       ${statCard(r.defCountry + ' — Bounties', r.defBounties.toFixed(2), 'btc', 'purple')}
-      ${statCard(r.defCountry + ' — Contracts', r.defContractSum.toFixed(2), 'btc (' + r.defCompleted.length + ' Stück)', 'purple')}
+      ${statCard(r.defCountry + ' — Contracts', r.defContractSum.toFixed(2), 'btc (' + r.defCompleted.length + ' units)', 'purple')}
     </div>
 
     <div class="side-panels">
@@ -395,7 +397,7 @@ function statCard(label, value, unit, color) {
 function renderSidePanel(side, name, total, bounties, contractSum, contracts) {
   const isAtt = side === 'attacker';
   const cls = isAtt ? 'attacker' : 'defender';
-  const sideLabel = isAtt ? 'Angreifer' : 'Verteidiger';
+  const sideLabel = isAtt ? 'Attacker' : 'Defender';
 
   let rows = '';
   if (contracts.length) {
@@ -404,11 +406,11 @@ function renderSidePanel(side, name, total, bounties, contractSum, contracts) {
         <td class="mu-name">${c.muName}${c.professionalsOnly ? '<span class="pro-only">[Pro]</span>' : ''}</td>
         <td>${c.cost.toFixed(2)} btc</td>
         <td>${c.perK.toFixed(2)}</td>
-        <td class="${c.completed ? 'completed' : 'incomplete'}">${c.completed ? '✓' : '✗'}</td>
+        <td class="text-mono ${c.completed ? 'completed' : 'incomplete'}">${c.completed ? '✓' : '✗'}</td>
       </tr>`;
     }
   } else {
-    rows = '<tr><td colspan="4" style="color:var(--text-dim);text-align:center;">Keine abgeschlossenen Contracts</td></tr>';
+    rows = '<tr><td colspan="4" style="color:var(--text-dim);text-align:center;">No completed contracts</td></tr>';
   }
 
   return `
@@ -419,13 +421,13 @@ function renderSidePanel(side, name, total, bounties, contractSum, contracts) {
       </div>
       <div class="side-panel-body">
         <div class="side-stat"><span class="label">Bounties</span><span class="value">${bounties.toFixed(2)} btc</span></div>
-        <div class="side-stat"><span class="label">Verträge</span><span class="value">${contractSum.toFixed(2)} btc</span></div>
-        <div class="side-stat"><span class="label">Anzahl</span><span class="value">${contracts.length}</span></div>
+        <div class="side-stat"><span class="label">Contracts</span><span class="value">${contractSum.toFixed(2)} btc</span></div>
+        <div class="side-stat"><span class="label">Count</span><span class="value">${contracts.length}</span></div>
       </div>
       ${contracts.length ? `
       <div class="table-wrap">
         <table class="contract-table">
-          <thead><tr><th>MU</th><th>Kosten</th><th>perK</th><th>Status</th></tr></thead>
+          <thead><tr><th>MU</th><th>Cost</th><th>perK</th><th>Status</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>` : ''}
@@ -458,12 +460,12 @@ function setupDatePresets() {
 
 async function fetchCountryReport() {
   const countryId = $('country-select').value;
-  if (!countryId) return showError('country-err', 'Bitte wähle ein Land.');
+  if (!countryId) return showError('country-err', 'Please select a country.');
 
   const dateFrom = $('country-date-from').value;
   const dateTo = $('country-date-to').value;
-  if (!dateFrom || !dateTo) return showError('country-err', 'Bitte wähle einen Zeitraum.');
-  if (!getApiKey()) return showError('country-err', 'Bitte gib zuerst deinen API-Token ein.');
+  if (!dateFrom || !dateTo) return showError('country-err', 'Please select a time period.');
+  if (!getApiKey()) return showError('country-err', 'Please enter your API token first.');
 
   isFetching = true;
   setFetchingState('country', true);
@@ -475,7 +477,7 @@ async function fetchCountryReport() {
   toDate.setHours(23, 59, 59, 999);
 
   const countryName = countryMap[countryId] || countryId;
-  setProgress('Lade Schlachtenliste...', 0);
+  setProgress('Loading battle list...', 0);
 
   try {
     const allBattles = await Warera.getAllBattles({
@@ -488,19 +490,19 @@ async function fetchCountryReport() {
     });
 
     if (filtered.length === 0) {
-      $('country-result').innerHTML = '<div class="empty-state"><p>Keine Schlachten im gewählten Zeitraum gefunden.</p></div>';
+      $('country-result').innerHTML = '<div class="empty-state"><p>No battles found in the selected period.</p></div>';
       isFetching = false;
       setFetchingState('country', false);
       hideProgress();
       return;
     }
 
-    setProgress(`Analysiere ${filtered.length} Schlachten...`, 0);
+    setProgress(`Analyzing ${filtered.length} battles...`, 0);
     const results = [];
     for (let i = 0; i < filtered.length; i++) {
       const b = filtered[i];
       const pct = Math.round(((i + 1) / filtered.length) * 100);
-      setProgress(`Analysiere Schlacht ${i + 1}/${filtered.length}...`, pct);
+      setProgress(`Analyzing battle ${i + 1}/${filtered.length}...`, pct);
       try {
         const r = await analyzeBattle(b._id);
         if (r) results.push(r);
@@ -510,7 +512,7 @@ async function fetchCountryReport() {
     }
 
     if (results.length === 0) {
-      $('country-result').innerHTML = '<div class="empty-state"><p>Keine Schlachten konnten analysiert werden.</p></div>';
+      $('country-result').innerHTML = '<div class="empty-state"><p>No battles could be analyzed.</p></div>';
       isFetching = false;
       setFetchingState('country', false);
       hideProgress();
@@ -580,25 +582,25 @@ function renderCountryReport(r) {
   let html = `
     <div class="battle-header">
       <div>
-        <div class="battle-title">${countryName} — Kostenreport</div>
+        <div class="battle-title">${countryName} — Cost Report</div>
         <div class="battle-meta">
-          <span><strong>Zeitraum:</strong> ${dateFrom} bis ${dateTo}</span>
-          <span><strong>Schlachten:</strong> ${results.length}</span>
+          <span><strong>Period:</strong> ${dateFrom} to ${dateTo}</span>
+          <span><strong>Battles:</strong> ${results.length}</span>
         </div>
       </div>
     </div>
 
     <div class="dashboard-grid">
-      ${statCard(countryName + ' — Gesamt', ownTotal.toFixed(2), 'btc', 'green')}
+      ${statCard(countryName + ' — Total', ownTotal.toFixed(2), 'btc', 'green')}
       ${statCard('Bounties', ownBounties.toFixed(2), 'btc', 'accent')}
-      ${statCard('Mercenary Contracts', ownContracts.toFixed(2), 'btc (' + ownContractsList.length + ' Stück)', 'accent')}
-      ${statCard('Gegner — Gesamt', oppTotal.toFixed(2), 'btc', 'red')}
-      ${statCard('Gegner — Top Contract', oppContractsList.length ? oppContractsList[0].cost.toFixed(2) : '0.00', 'btc', 'purple')}
-      ${statCard('Schlachten', results.length, 'im Zeitraum', 'cyan')}
+      ${statCard('Mercenary Contracts', ownContracts.toFixed(2), 'btc (' + ownContractsList.length + ' units)', 'accent')}
+      ${statCard('Opponent — Total', oppTotal.toFixed(2), 'btc', 'red')}
+      ${statCard('Opponent — Top Contract', oppContractsList.length ? oppContractsList[0].cost.toFixed(2) : '0.00', 'btc', 'purple')}
+      ${statCard('Battles', results.length, 'in period', 'cyan')}
     </div>
 
     <div class="card">
-      <div class="card-header">Zusammenfassung</div>
+      <div class="card-header">Summary</div>
       <div class="table-wrap">
         <table class="contract-table">
           <thead><tr>
@@ -615,7 +617,7 @@ function renderCountryReport(r) {
               <td style="text-align:right;"><strong>${ownTotal.toFixed(2)} btc</strong></td>
             </tr>
             <tr>
-              <td><strong>Gegner</strong></td>
+              <td><strong>Opponent</strong></td>
               <td style="text-align:right;">${oppBounties.toFixed(2)} btc</td>
               <td style="text-align:right;">${oppContracts.toFixed(2)} btc</td>
               <td style="text-align:right;"><strong>${oppTotal.toFixed(2)} btc</strong></td>
@@ -626,12 +628,12 @@ function renderCountryReport(r) {
     </div>
 
     <div class="card">
-      <div class="card-header">Schlachten-Liste (${results.length})</div>
+      <div class="card-header">Battle List (${results.length})</div>
       ${results.map(res => renderBattleListItem(res, r.countryId)).join('')}
     </div>
 
-    ${renderTopContracts('Eigene Top Contracts', ownContractsList, countryName)}
-    ${renderTopContracts('Gegner Top Contracts', oppContractsList, 'Gegner')}
+    ${renderTopContracts('Own Top Contracts', ownContractsList, countryName)}
+    ${renderTopContracts('Opponent Top Contracts', oppContractsList, 'Opponent')}
   `;
 
   el.innerHTML = html;
@@ -652,9 +654,9 @@ function renderBattleListItem(res, ownCountryId) {
 
   const attRows = res.attCompleted.map(c => `<tr>
     <td class="mu-name">${c.muName}${c.professionalsOnly ? '<span class="pro-only">[Pro]</span>' : ''}</td>
-    <td>${c.cost.toFixed(2)} btc</td>
-    <td>${c.perK.toFixed(2)}</td>
-    <td class="${c.completed ? 'completed' : 'incomplete'}">${c.minDamage.toLocaleString()} / ${c.actualDamage.toLocaleString()}</td>
+    <td class="text-mono">${c.cost.toFixed(2)} btc</td>
+    <td class="text-mono">${c.perK.toFixed(2)}</td>
+    <td class="text-mono ${c.completed ? 'completed' : 'incomplete'}">${c.minDamage.toLocaleString()} / ${c.actualDamage.toLocaleString()}</td>
   </tr>`).join('');
 
   const defRows = res.defCompleted.map(c => `<tr>
@@ -680,25 +682,25 @@ function renderBattleListItem(res, ownCountryId) {
         <div class="side-panels" style="margin-top:0;">
           <div class="side-panel">
             <div class="side-panel-header attacker">
-              <span>${res.attCountry} <span class="text-dim">(${(isAtt ? 'eigen' : 'gegner')})</span></span>
+              <span>${res.attCountry} <span class="text-dim">(${(isAtt ? 'own' : 'opp')})</span></span>
               <span style="font-family:var(--font-mono);font-size:0.85rem;">${res.attTotal.toFixed(2)} btc</span>
             </div>
             <div class="side-panel-body">
               <div class="side-stat"><span class="label">Bounties</span><span class="value">${res.attBounties.toFixed(2)} btc</span></div>
-              <div class="side-stat"><span class="label">Verträge</span><span class="value">${res.attContractSum.toFixed(2)} btc</span></div>
-            </div>
-            ${attRows ? '<div class="table-wrap"><table class="contract-table"><thead><tr><th>MU</th><th>Kosten</th><th>perK</th><th>Damage</th></tr></thead><tbody>' + attRows + '</tbody></table></div>' : ''}
+              <div class="side-stat"><span class="label">Contracts</span><span class="value">${res.attContractSum.toFixed(2)} btc</span></div>
           </div>
-          <div class="side-panel">
-            <div class="side-panel-header defender">
-              <span>${res.defCountry} <span class="text-dim">(${(isAtt ? 'gegner' : 'eigen')})</span></span>
-              <span style="font-family:var(--font-mono);font-size:0.85rem;">${res.defTotal.toFixed(2)} btc</span>
+          ${attRows ? '<div class="table-wrap"><table class="contract-table"><thead><tr><th>MU</th><th>Cost</th><th>perK</th><th>Damage</th></tr></thead><tbody>' + attRows + '</tbody></table></div>' : ''}
+        </div>
+        <div class="side-panel">
+          <div class="side-panel-header defender">
+            <span>${res.defCountry} <span class="text-dim">(${(isAtt ? 'opp' : 'own')})</span></span>
+            <span style="font-family:var(--font-mono);font-size:0.85rem;">${res.defTotal.toFixed(2)} btc</span>
+          </div>
+          <div class="side-panel-body">
+            <div class="side-stat"><span class="label">Bounties</span><span class="value">${res.defBounties.toFixed(2)} btc</span></div>
+            <div class="side-stat"><span class="label">Contracts</span><span class="value">${res.defContractSum.toFixed(2)} btc</span></div>
             </div>
-            <div class="side-panel-body">
-              <div class="side-stat"><span class="label">Bounties</span><span class="value">${res.defBounties.toFixed(2)} btc</span></div>
-              <div class="side-stat"><span class="label">Verträge</span><span class="value">${res.defContractSum.toFixed(2)} btc</span></div>
-            </div>
-            ${defRows ? '<div class="table-wrap"><table class="contract-table"><thead><tr><th>MU</th><th>Kosten</th><th>perK</th><th>Damage</th></tr></thead><tbody>' + defRows + '</tbody></table></div>' : ''}
+            ${defRows ? '<div class="table-wrap"><table class="contract-table"><thead><tr><th>MU</th><th>Cost</th><th>perK</th><th>Damage</th></tr></thead><tbody>' + defRows + '</tbody></table></div>' : ''}
           </div>
         </div>
       </div>
@@ -726,7 +728,7 @@ function renderTopContracts(title, contracts) {
           <thead><tr>
             <th>#</th>
             <th>MU</th>
-            <th style="text-align:right;">Kosten</th>
+            <th style="text-align:right;">Cost</th>
             <th style="text-align:right;">perK</th>
             <th style="text-align:right;">Min Damage</th>
             <th>Status</th>
@@ -736,6 +738,266 @@ function renderTopContracts(title, contracts) {
       </div>
     </div>
   `;
+}
+
+// ─── Loot Mode ──────────────────────────────────
+function setupLootMode() {
+  $('loot-fetch-btn').addEventListener('click', fetchLootBreakPoints);
+  $('loot-user-id').addEventListener('keydown', e => { if (e.key === 'Enter') fetchLootBreakPoints(); });
+}
+
+function getTierFromCode(code) {
+  if (!code || code === 'no-loot') return 0;
+  const named = { knife: 1, pistol: 2, gun: 2, rifle: 3, sniper: 4, tank: 5, jet: 6 };
+  if (named[code] !== undefined) return named[code];
+  const m = code.match(/(\d+)$/);
+  return m ? parseInt(m[1]) : 0;
+}
+
+const TIER_RARITY = ['None', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'];
+
+async function fetchLootBreakPoints() {
+  const userId = $('loot-user-id').value.trim();
+  const dmgInput = $('loot-damage').value.trim();
+  const projectedDamage = dmgInput ? parseFloat(dmgInput) : null;
+  if (!getApiKey()) return showError('loot-err', 'Please enter your API token first.');
+
+  setFetchingState('loot', true);
+  hideError('loot-err');
+
+  try {
+    let userName = '';
+    if (userId) {
+      userName = userId;
+      try {
+        const user = await Warera.getUserLite(userId);
+        userName = user.username || user.name || userId;
+      } catch {}
+    }
+
+    $('loot-result').innerHTML = '<div class="loading"><div class="spinner"></div> Loading active battles...</div>';
+
+    const battles = [];
+    let cursor = null;
+    while (true) {
+      const params = { isActive: true, limit: 50 };
+      if (cursor) params.cursor = cursor;
+      const data = await Warera.getBattles(params);
+      const items = data.items || [];
+      battles.push(...items);
+      cursor = data.nextCursor;
+      if (!cursor || !items.length) break;
+    }
+    if (!battles.length) {
+      $('loot-result').innerHTML = '<div class="empty-state"><p>No active battles found.</p></div>';
+      return;
+    }
+
+    $('loot-result').innerHTML = '<div class="loading"><div class="spinner"></div> Analyzing battles...</div>';
+
+    const priceData = await Warera.getItemPrices();
+    const scrapPrice = Number(priceData?.scraps) || 0;
+    const steelPrice = Number(priceData?.steel) || 0;
+    const craftCost = {
+      1: scrapPrice * 6 + steelPrice * 1,
+      2: scrapPrice * 18 + steelPrice * 1,
+      3: scrapPrice * 54 + steelPrice * 4,
+      4: scrapPrice * 162 + steelPrice * 8,
+      5: scrapPrice * 486 + steelPrice * 16,
+      6: scrapPrice * 1460 + steelPrice * 32,
+    };
+
+    const results = await Promise.all(battles.map(async (battle) => {
+      const roundId = battle.rounds?.[battle.rounds.length - 1];
+      if (!roundId) return null;
+
+      const attCountry = countryMap[battle.attacker?.country] || battle.attacker?.country?.slice(0, 8) || '?';
+      const defCountry = countryMap[battle.defender?.country] || battle.defender?.country?.slice(0, 8) || '?';
+      if (attCountry === '?' && defCountry === '?') return null;
+      const roundNum = battle.rounds?.length || null;
+      const battleAge = battle.createdAt ? Date.now() - new Date(battle.createdAt).getTime() : 0;
+
+      const entries = [];
+      let cursor = null;
+      let foundUser = false;
+      let pages = 0;
+
+      while (!foundUser && pages < 20) {
+        pages++;
+        const params = { roundId, dataType: 'damage', side: 'merged', type: 'user', limit: 100 };
+        if (cursor) params.cursor = cursor;
+
+        const rankingData = await Warera.getRanking(params);
+        const items = rankingData.items || [];
+
+        for (const item of items) {
+          entries.push(item);
+          if (userId && item.user === userId) { foundUser = true; break; }
+        }
+
+        cursor = rankingData.nextCursor;
+        if (!cursor || !items.length) break;
+      }
+
+      entries.sort((a, b) => a.rank - b.rank);
+      const userEntry = userId ? entries.find(e => e.user === userId) : null;
+
+      return {
+        battleId: battle._id,
+        title: `${attCountry} vs ${defCountry}`,
+        roundId: roundId.slice(0, 8),
+        roundNum,
+        battleAge,
+        entries,
+        userEntry,
+      };
+    }));
+
+    let filteredResults = results.filter(Boolean);
+
+    if (projectedDamage) {
+      for (const r of filteredResults) {
+        const existingDmg = r.userEntry?.value || 0;
+        const totalDmg = existingDmg + projectedDamage;
+        const tierMin = computeBreakPoints(r.entries);
+        let projTier = 0;
+        let projDmg = 0;
+        for (let t = 6; t >= 1; t--) {
+          if (tierMin[t] && totalDmg >= tierMin[t].damage) {
+            projTier = t;
+            projDmg = tierMin[t].damage;
+            break;
+          }
+        }
+        const price = craftCost[projTier] || 0;
+        r.projectedTier = projTier;
+        r.existingDmg = existingDmg;
+        r.projectedBtcPer1k = price && projDmg ? (price / projDmg * 1000) : 0;
+      }
+      filteredResults.sort((a, b) => b.projectedBtcPer1k - a.projectedBtcPer1k);
+    }
+
+    renderLootResult(filteredResults, userId, userName, { scrapPrice, steelPrice, craftCost }, projectedDamage);
+  } catch (err) {
+    showError('loot-err', `Error: ${err.message}`);
+    $('loot-result').innerHTML = '';
+  } finally {
+    setFetchingState('loot', false);
+  }
+}
+
+function computeBreakPoints(entries) {
+  const tierMin = {};
+  for (const e of entries) {
+    const code = e.lootItem?.code;
+    if (!code || code === 'no-loot') continue;
+    const tier = getTierFromCode(code);
+    if (tier === 0) continue;
+    if (!tierMin[tier] || e.value < tierMin[tier].damage) {
+      tierMin[tier] = { damage: e.value, item: code, rank: e.rank };
+    }
+  }
+  return tierMin;
+}
+
+function renderLootResult(results, userId, userName, pricesObj, projectedDamage) {
+  const { scrapPrice, steelPrice, craftCost: tierPrices } = pricesObj || {};
+  const el = $('loot-result');
+
+  if (results.length === 0) {
+    el.innerHTML = '<div class="empty-state"><p>No active rounds found.</p></div>';
+    return;
+  }
+
+  let html = '';
+  if (userId) {
+    html = `<div class="card" style="margin-bottom:8px;">
+      <div class="battle-title" style="font-size:0.95rem;">User: ${userName} <span class="text-dim" style="font-family:var(--font-mono);font-weight:400;font-size:0.8rem;">${userId.slice(0, 12)}</span></div>
+    </div>`;
+  }
+
+  for (const r of results) {
+    const { title, roundId, roundNum, battleAge, userEntry, projectedTier } = r;
+    const tierMin = computeBreakPoints(r.entries);
+
+    const userTier = userEntry ? getTierFromCode(userEntry.lootItem?.code) : 0;
+    const userDmg = userId ? userEntry?.value : 0;
+
+    const tiers = Object.keys(tierMin).map(Number).sort((a, b) => b - a);
+
+    let tableRows = '';
+    for (const tier of tiers) {
+      const info = tierMin[tier];
+      const reached = userDmg != null && info.damage <= userDmg;
+      const delta = (reached || userDmg == null) ? null : info.damage - userDmg;
+
+      const price = tierPrices?.[tier] || 0;
+      const btcPer1k = price ? (price / info.damage * 1000) : null;
+      const craft = { 1: {s:6,st:1}, 2: {s:18,st:1}, 3: {s:54,st:4}, 4: {s:162,st:8}, 5: {s:486,st:16}, 6: {s:1460,st:32} }[tier];
+      const tooltip = price && craft
+        ? `${craft.s} scrap × ${scrapPrice.toFixed(4)} + ${craft.st} steel × ${steelPrice.toFixed(4)} = ${price.toFixed(6)} BTC`
+        : '';
+
+      const rowClass = projectedTier === tier ? ' class="loot-projected-row"' : '';
+
+      tableRows += `<tr${rowClass}>
+        <td><span class="tier-badge tier-${tier}"${tooltip ? ` title="${tooltip}"` : ''}>${TIER_RARITY[tier]}</span></td>
+        <td class="text-mono">${info.damage.toLocaleString()}</td>
+        <td style="font-family:var(--font-mono);font-size:0.8rem;">${info.item}</td>
+        <td style="font-size:0.8rem;color:var(--text-dim);">#${info.rank}</td>
+        <td class="text-mono" style="${reached ? 'color:var(--green);' : 'color:var(--orange);'}">${reached ? '✓' : (delta != null ? '+' + delta.toLocaleString() : '—')}</td>
+        <td class="text-mono" style="font-size:0.75rem;">${btcPer1k != null ? btcPer1k.toFixed(6) : '—'}</td>
+      </tr>`;
+    }
+
+    if (!tableRows) {
+      tableRows = '<tr><td colspan="6" style="text-align:center;color:var(--text-dim);padding:20px;">No loot items in this round.</td></tr>';
+    }
+
+    let lootInfo;
+    if (userId && projectedDamage) {
+      const existingDmg = r.existingDmg || 0;
+      const totalDmg = existingDmg + projectedDamage;
+      lootInfo = `<span><strong>Rank #${userEntry?.rank || '?'}</strong> — ${existingDmg.toLocaleString()} + ${projectedDamage.toLocaleString()} = ${totalDmg.toLocaleString()} → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(6)} BTC)</span>`;
+    } else if (userId && userEntry) {
+      lootInfo = userTier > 0
+        ? `<span><strong>Rank #${userEntry.rank}</strong> — ${userDmg.toLocaleString()} Damage — Item: <strong>${userEntry.lootItem.code}</strong> (${TIER_RARITY[userTier]})</span>`
+        : `<span><strong>Rank #${userEntry.rank}</strong> — ${userDmg.toLocaleString()} Damage — <span style="color:var(--orange);">No loot</span></span>`;
+    } else if (userId && !userEntry) {
+      lootInfo = '<span style="color:var(--orange);">Not in this round\'s ranking</span>';
+    } else if (projectedDamage) {
+      lootInfo = `<span>Est. <strong>${projectedDamage.toLocaleString()}</strong> damage → <strong>${TIER_RARITY[projectedTier] || 'None'}</strong> (${(tierPrices?.[projectedTier] || 0).toFixed(6)} BTC)</span>`;
+    } else {
+      lootInfo = '';
+    }
+
+    html += `<div class="card">
+      <div class="battle-header" style="margin-bottom:12px;">
+        <div>
+          <div class="battle-title">${title}</div>
+          <div class="battle-meta">
+            <span>${formatDuration(battleAge)} · Round ${roundNum ?? '?'} <span class="text-dim" style="font-family:var(--font-mono);font-size:0.75rem;">${roundId}</span></span>
+            ${lootInfo}
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="contract-table">
+          <thead><tr>
+            <th>Tier</th>
+            <th>Min. Damage</th>
+            <th>Item</th>
+            <th>Rank</th>
+            <th>Status</th>
+            <th>BTC/1k</th>
+          </tr></thead>
+          <tbody>${tableRows}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }
+
+  el.innerHTML = html;
 }
 
 // ─── Helpers ─────────────────────────────────────
@@ -749,11 +1011,27 @@ function hideError(id) {
   if (el) el.classList.add('hidden');
 }
 
+function formatDuration(ms) {
+  if (ms <= 0) return '';
+  const totalMin = Math.floor(ms / 60000);
+  if (totalMin < 1) return '<1m';
+  const hours = Math.floor(totalMin / 60);
+  const mins = totalMin % 60;
+  if (hours >= 24) {
+    const days = Math.floor(hours / 24);
+    const remHours = hours % 24;
+    return `${days}d ${remHours}h`;
+  }
+  if (hours > 0) return `${hours}h ${mins}m`;
+  return `${mins}m`;
+}
+
 function setFetchingState(mode, fetching) {
-  const btn = mode === 'battle' ? $('battle-fetch-btn') : $('country-fetch-btn');
+  const labels = { battle: 'Abrufen', country: 'Report erstellen', loot: 'Break Points' };
+  const btn = mode === 'battle' ? $('battle-fetch-btn') : mode === 'country' ? $('country-fetch-btn') : $('loot-fetch-btn');
   if (btn) {
     btn.disabled = fetching;
-    btn.textContent = fetching ? 'Lädt...' : (mode === 'battle' ? 'Abrufen' : 'Report erstellen');
+    btn.textContent = fetching ? 'Loading...' : (labels[mode] || 'Fetch');
   }
 }
 

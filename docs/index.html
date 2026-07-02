@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warera Reports</title>
+  <title>Warera Battle Reports</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,12 +13,12 @@
 
   <!-- Header -->
   <header class="app-header">
-    <h1><span>Warera</span> Reports</h1>
+    <h1><span>Warera</span> Battle Reports</h1>
     <div class="header-actions">
       <div class="token-input-group">
-        <input type="text" id="api-token" placeholder="API Token eingeben..." spellcheck="false">
+        <input type="text" id="api-token" placeholder="Enter API Token..." spellcheck="false">
         <span id="token-status" class="token-status">
-          <span class="dot unset"></span> Kein Token
+          <span class="dot unset"></span> No Token
         </span>
       </div>
     </div>
@@ -29,32 +29,33 @@
     <!-- Settings Bar -->
     <div class="settings-bar">
       <label>
-        <span class="label-row">Modus</span>
+        <span class="label-row">Mode</span>
         <div class="mode-toggle">
           <button class="mode-btn active" data-mode="battle">Battle</button>
-          <button class="mode-btn" data-mode="country">Land</button>
+          <button class="mode-btn" data-mode="country">Country</button>
+          <button class="mode-btn" data-mode="loot">Loot</button>
         </div>
       </label>
 
       <div id="view-battle" class="mode-view flex-wrap items-center gap-8" style="display:flex;flex:1;">
         <label style="flex:1;min-width:200px;">
           <span class="label-row">Battle ID</span>
-          <input type="text" id="battle-id" placeholder="z.B. 6a166e21912e4f61ebb8d84a" style="width:100%;">
+          <input type="text" id="battle-id" placeholder="e.g. 6a166e21912e4f61ebb8d84a" style="width:100%;">
         </label>
-        <button class="btn" id="battle-fetch-btn" style="margin-top:14px;">Abrufen</button>
+        <button class="btn" id="battle-fetch-btn" style="margin-top:14px;">Fetch</button>
       </div>
 
       <div id="view-country" class="mode-view flex-wrap items-center gap-8 hidden" style="flex:1;">
         <label style="flex:1;min-width:160px;">
-          <span class="label-row">Land</span>
+          <span class="label-row">Country</span>
           <select id="country-select" style="width:100%;"></select>
         </label>
         <label>
-          <span class="label-row">Von</span>
+          <span class="label-row">From</span>
           <input type="date" id="country-date-from">
         </label>
         <label>
-          <span class="label-row">Bis</span>
+          <span class="label-row">To</span>
           <input type="date" id="country-date-to">
         </label>
         <div>
@@ -67,13 +68,26 @@
             <button class="date-preset" data-days="30">30d</button>
           </div>
         </div>
-        <button class="btn" id="country-fetch-btn" style="margin-top:14px;">Report erstellen</button>
+        <button class="btn" id="country-fetch-btn" style="margin-top:14px;">Create Report</button>
+      </div>
+
+      <div id="view-loot" class="mode-view flex-wrap items-center gap-8 hidden" style="flex:1;">
+        <label style="flex:1;min-width:200px;">
+          <span class="label-row">User ID (optional)</span>
+          <input type="text" id="loot-user-id" placeholder="Your User ID..." style="width:100%;">
+        </label>
+        <label style="min-width:140px;">
+          <span class="label-row">Your DMG/round (opt.)</span>
+          <input type="number" id="loot-damage" placeholder="e.g. 50000" style="width:100%;">
+        </label>
+        <button class="btn" id="loot-fetch-btn" style="margin-top:14px;">Break Points</button>
       </div>
     </div>
 
     <!-- Error displays -->
     <div id="battle-err" class="error-box hidden"></div>
     <div id="country-err" class="error-box hidden"></div>
+    <div id="loot-err" class="error-box hidden"></div>
 
     <!-- Progress -->
     <div id="country-progress" class="card hidden">
@@ -83,18 +97,19 @@
 
     <!-- Recent Top Battles (Battle Mode) -->
     <div id="recent-battles" class="card">
-      <div class="card-header">Letzte 3 Tage — nach Schaden</div>
-      <div id="recent-battles-list"><div class="loading"><div class="spinner"></div> Lade aktuelle Schlachten...</div></div>
+      <div class="card-header">Last 3 days — by damage</div>
+      <div id="recent-battles-list"><div class="loading"><div class="spinner"></div> Loading current battles...</div></div>
     </div>
 
     <!-- Results -->
     <div id="battle-result"></div>
     <div id="country-result"></div>
+    <div id="loot-result"></div>
 
     <!-- Empty state -->
     <div id="empty-state" class="empty-state">
-      <p style="font-size:1.2rem;font-weight:600;">Willkommen bei Warera Reports</p>
-      <p>Gib oben deinen API-Token ein und wähle einen Modus.</p>
+      <p style="font-size:1.2rem;font-weight:600;">Welcome to Warera Reports</p>
+      <p>Enter your API token above and select a mode.</p>
     </div>
   </div>
 
